@@ -79,7 +79,7 @@ export default function AssetSection() {
 
   useEffect(() => {
     window.addEventListener("scroll", () =>
-      console.log({ scrollYProgress: scrollYProgress.cuurent, scrollY })
+      console.log({ scrollYProgress: scrollYProgress.get(), scrollY })
     );
   }, []);
 
