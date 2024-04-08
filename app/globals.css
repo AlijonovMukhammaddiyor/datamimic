@@ -2,19 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 @import '../public/fonts/druk-cyr/stylesheet.css';
+@import '../public/fonts/inter-tight/inter-stylesheet.css';
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 15, 18, 18;
-  --background-end-rgb: 15, 18, 18;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb:  0, 0, 0;
 
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 15, 18, 18;
-    --background-end-rgb: 15, 18, 18;
+    --background-start-rgb:  255, 255, 255;
+    --background-end-rgb:  255, 255, 255;
   }
 }
 
@@ -26,149 +28,6 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    font-family: 'Druk Cyr';
+    font-family: 'Druk Cyr', 'InterTight';
 
 }
-
-.container {
-  margin: 4px auto 0;
-  padding: 0 16px;
-  max-width: 1080px;
-}
-
-.motion-progress {
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 4px;
-  top: 0;
-  left: 0;
-  background: #424242;
-}
-
-.motion-progress > div {
-  width: 100%;
-  height: 100%;
-}
-
-.sticky-wrapper {
-  position: sticky;
-  top: 0;
-  height: 50vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.carousel {
-  display: flex;
-  gap: 48px;
-}
-
-.carousel__slide {
-  width: 300px;
-  height: 300px;
-  background-color: #808080;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-}
-
-
-
-*, *::before, *::after {
-  box-sizing: border-box; /* Too much math below to be concerned with standard CSS Box Model element dimensions calculations. Let's not have to account for padding/margins/borders on anything here. */
-}
-
-.carousel_wrapper {
-  position: relative;
-  width: 320px;
-  margin: 100px auto 0 auto;
-  perspective: 1000px;
-}
-
-.carousels {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transform: rotateY(-360deg) translateZ(-412px); /* add reverse transformation from the slides */
-  animation: swirl 30s steps(10000, end) infinite; /* run `swirl` animation (defined at end of CSS) infitely, with animation lasting 40 seconds, and 10,000 steps between the FROM and TO values in the animation for a smooth rotation */
-}
-
-.slide {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 300px;
-  height: 187px;
-}
-
-
-
-/*
-9 Slides total: 360 Degrees (full circle) --> 360/9 = 40 --> our increment for rotation
-
-Some math. Consider how the carousel will be set up. It's going to be a 3D circle, like an orbit. The orientation will be such that it would be like setting a ring down on a table, then bending down and looking at the ring head on from the edge of the table. The main "front" image will be entirely front-facing. The other images will be rotated slightly to make a full circle. You could sketch this out in 2D from a bird's eye view, and you'd end up with a picture like the following:
-
-https://cl.ly/image/2P3E1U0W0c29
-
-Each triangle/piece would be a slide, hence 9 pieces. That being said, let's do some calculations, but we'll use the dimensions of our elements rather than those in the picture.
-
-So, we're rotating all the slides in 40º increments relative to each other, because 360º makes a full circle, and we have 9 elements: 360/9 = 40
-
-In the picture above, we want to find the radius of the circle (which isn't exactly a circle because it's made up of triangles). So we can cut each triangle in half and solve for `r` (radius). We can solve for `r` using some geometry and our own elements' dimensions. 
-
-The width of the slides is 300px. We're going to split those triangles in half and use the TANGENT function in geometry/trigonemty to solve for `r`. And since we're splitting each of the 9 triangles (the slides) in half for this, we need to account for the fact that our key angle is now going to be 20º and not 40º. We can solve for `r` by taking our smaller triangles' width (150px) and dividing by the tangent of 20º (in degrees, not radians). So:
-
-            150
-   r =  -----------
-          tan(20º)
-
-Here's a screenshot of me doing the calculations in JavaScript, right in the browser console!
-
-Math things: https://cl.ly/image/1t0j1V2Y2l2Z
-
-So, `r` is (about) 412px long! This means we need to TRANSLATE the slides in the Z 3-dimensional plane by 412px. This should be done AFTER the rotateY transformation.
-*/
-
-.slide.one {
-  transform: rotateY(0deg) translateZ(412px);
-}
-.slide.two {
-  transform: rotateY(52deg) translateZ(412px);
-}
-.slide.three {
-  transform: rotateY(104deg) translateZ(412px);
-}
-.slide.four {
-  transform: rotateY(156deg) translateZ(412px);
-}
-.slide.five {
-  transform: rotateY(208deg) translateZ(412px);
-}
-.slide.six {
-  transform: rotateY(260deg) translateZ(412px);
-}
-.slide.seven {
-  transform: rotateY(310deg) translateZ(412px);
-}
-
-/*
-CSS3 ANIMATION
--------------------
-Simply rotates the carousel around the Y axis by using rotateY and starting at initial value, -360º, and going to final value 0º, then resetting.
-*/
-
-@keyframes swirl {   
-  from {
-    transform: rotateY(-360deg);
-  }
-  to {
-    transform: rotateY(0deg);
-  }
-} 

@@ -14,10 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <img className='top-0 absolute z-1 bg-repeat-y' src='/images/jalaswap-landing-page-bg.svg'/>
-        <div className='absolute z-20 w-full pb-10 overflow-x-hidden'>{children}</div>
-      </body>
+      <body className='bg-bg-main'>{children}</body>
     </html>
   )
 }

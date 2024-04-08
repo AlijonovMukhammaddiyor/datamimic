@@ -1,81 +1,78 @@
 import { useCheckIsMobile } from "@/hooks/useCheckIsMobile"
+import { SectionDivider } from "./ui/SectionDivider";
+import Marquee from "react-fast-marquee";
 
 export default function TokenSection () {
     const isMobile = useCheckIsMobile();
 
+    type IdToUrlMap = {
+        [key: number]: string;
+      };
+    
+      const idToUrlMap: IdToUrlMap = {
+        1: "/images/psg-token-img.svg",
+        2: "/images/bvb-token-img.svg",
+        3: "/images/fcb-token-img.svg",
+        4: "/images/manu-token-img.svg",
+        5: "/images/cbf-token-img.svg",
+        6: "/images/oc-token-img.svg",
+      };
+
+
     return(
     <>{isMobile ? 
-        <div className='w-full'>
+        <div className='w-full border-y  border-[#272A2A] px-[5%]'>
+            <SectionDivider/>
             <div className='flex justify-start uppercase text-[48px] leading-[56px] font-medium text-start text-[#FF1D00]'>
-                <div className="w-[99%]">80+ real world-based <br/><span className='text-white'>fan tokens ready to be traded and staked.</span>
+                <div className="w-[350px]">80+ real world-based <br/><span className='text-white'>fan tokens ready to be traded and staked.</span>
             </div>
         </div>
-        <div className='flex justify-center items-start h-[400px]'>
-            <div className="carousel_wrapper">
-                <div className="carousels">
-                    <div className="slide one">
-                    <img className="px-4" src='/images/chiliz-token-img.svg'></img>
+        <div className="flex justify-center overflow-hidden">
+            <div className='flex justify-center items-center h-[400px] w-[350px] sm:w-[600px] md:w-[600px] '>
+                    <Marquee pauseOnHover>
+                    {[1, 2, 3, 4, 5].map((id: number) => (
+                        <img className="px-10  w-[200px]" key={id} src={idToUrlMap[id]} />
+                    ))}
+                    </Marquee>
+                    <div className="absolute z-10">
+                        <img className="px-4 w-[350px]" src='/images/chiliz-logo.svg'></img>
                     </div>
-                    <div className="slide two">
-                    <img className="px-4"  src='/images/psg-token-img.svg'></img>
-                    </div>
-                    <div className="slide three">
-                    <img className="px-4"  src='/images/bvb-token-img.svg'></img>
-                    </div>
-                    <div className="slide four">
-                    <img className="px-4"  src='/images/fcb-token-img.svg'></img>
-                    </div>
-                    <div className="slide five">
-                    <img className="px-4"  src='/images/manu-token-img.svg'></img>
-                    </div>
-                    <div className="slide six">
-                    <img className="px-4"  src='/images/cbf-token-img.svg'></img>
-                    </div>
-                    <div className="slide seven">
-                    <img className="px-4"  src='/images/oc-token-img.svg'></img>
-                    </div>
-                </div>
             </div>
         </div>
-        <div className='flex justify-end uppercase text-[48px] leading-[56px] font-medium text-start text-white'>
-            <div className="w-[90%]">Watch for the seasonal events and<br/>
+        <div className='flex w-full justify-end uppercase text-[48px] leading-[56px] font-medium text-start text-white'>
+            <div className="w-[300px]">Watch for the<br/> seasonal events and<br/>
             <span className='text-[#FF1D00] '>earn token rewards.</span>
             </div>    
         </div>   
+        <SectionDivider/>
+
     </div>
     :
-    <div className='w-full'>
-        <div className='uppercase text-[96px] leading-[104px] text-start text-[#FF1D00] w-[800px] xl:w-[1200px]'>80+ real world-based <span className='text-white'>fan tokens ready to be traded and staked.</span></div>
-        <div className='flex justify-center items-start h-[600px] py-20'>
-            <div className="carousel_wrapper">
-                <div className="carousels">
-                    <div className="slide one">
-                    <img className="px-4" src='/images/chiliz-token-img.svg'></img>
-                    </div>
-                    <div className="slide two">
-                    <img className="px-4"  src='/images/psg-token-img.svg'></img>
-                    </div>
-                    <div className="slide three">
-                    <img className="px-4"  src='/images/bvb-token-img.svg'></img>
-                    </div>
-                    <div className="slide four">
-                    <img className="px-4"  src='/images/fcb-token-img.svg'></img>
-                    </div>
-                    <div className="slide five">
-                    <img className="px-4"  src='/images/manu-token-img.svg'></img>
-                    </div>
-                    <div className="slide six">
-                    <img className="px-4"  src='/images/cbf-token-img.svg'></img>
-                    </div>
-                    <div className="slide seven">
-                    <img className="px-4"  src='/images/oc-token-img.svg'></img>
-                    </div>
+    <div className=' border-y  border-[#272A2A] md:px-[20px] 2xl:px-[25px]'>
+        <SectionDivider/>
+        <div className="py-10">
+            {/* Upper Title */}
+            <div className='uppercase md:text-[76px]  2xl:text-[96px] leading-[104px] text-start text-[#FF1D00] md:w-[800px] 2xl:w-[1000px]'>
+                80+ real world-based 
+                <span className='text-white'>fan tokens ready to be traded and staked.</span>
+            </div>
+
+            <div className='flex justify-center items-center h-[600px] py-20'>
+                <Marquee pauseOnHover>
+                {[1, 2, 3, 4, 5].map((id: number) => (
+                    <img className="px-16" key={id} src={idToUrlMap[id]} />
+                ))}
+                </Marquee>
+                <div className="absolute z-10">
+                    <img className="px-4 w-[500px]" src='/images/chiliz-logo.svg'></img>
                 </div>
             </div>
+            {/* Lower Title */}
+            <div className="flex justify-end ">
+                <div className='uppercase md:text-[76px] 2xl:text-[96px] leading-[104px] text-start text-white  md:w-[700px] 2xl:w-[837px]'>Watch for the seasonal events and <span className='text-[#FF1D00] '>earn token rewards.</span></div>
+            </div>
         </div>
-        <div className="flex justify-end">
-            <div className='uppercase text-[96px] leading-[104px] text-start text-white  w-[800px] xl:w-[1200px]'>Watch for the seasonal events and <span className='text-[#FF1D00] '>earn token rewards.</span></div>
-        </div>
+        <SectionDivider/>
     </div>
     }
     </>
