@@ -9,22 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^11.0.24",
-    "framer-motion-3d": "^11.0.24",
+    "framer-motion": "^11.0.25",
     "next": "13.5.6",
-    "normalize.css": "^8.0.1",
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.4",
-    "react-responsive": "^10.0.0",
-    "three": "^0.163.0",
-    "throttle-debounce-ts": "^1.1.1"
+    "react-responsive": "^10.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@xpd/tailwind-3dtransforms": "^1.0.3",
     "autoprefixer": "^10",
     "eslint": "^8",
     "eslint-config-next": "13.5.6",

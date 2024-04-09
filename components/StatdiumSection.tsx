@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import Image from "next/image";
+import { useRef } from "react";
 
 export function StatdiumSection() {
     const container = {
@@ -69,9 +70,9 @@ export function StatdiumSection() {
         hidden: { opacity: 0 },
         show: { opacity: 1 }
       }
-      
+
       return (
-        <div className="flex justify-center h-[200px] md:h-[400px] 2xl:h-[500px]">
+      <div className="flex justify-center h-[200px] md:h-[400px] 2xl:h-[500px]" >
           <motion.ul
           variants={container}
           initial="hidden"
@@ -143,8 +144,6 @@ export function StatdiumSection() {
           <img src='/images/Stadium7.svg'  className="px-[5%] md:px-[20%] 2xl:px-[5%]" alt={""}/>
           </motion.li>
         </motion.ul>
-
         </div>
-
       )
 }

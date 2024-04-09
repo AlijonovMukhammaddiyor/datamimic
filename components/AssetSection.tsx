@@ -3,8 +3,6 @@ import { motion, useScroll,
   MotionProps,
   useTransform
    } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import { throttle } from "throttle-debounce-ts";
 import AssetCard from "./ui/AssetCard";
 
 
@@ -60,11 +58,14 @@ export default function AssetSection() {
         :
       <>
       <div className='w-full space-y-20'>
+        <div className='flex justify-between items-start'>
           <div className='w-[50%] md:py-10 2xl:py-20 space-y-3'>
             <div className='uppercase text-[80px] leading-[88px] font-semibold text-start text-white '>Your assets,<br/><span className='text-jala-red'>secured.</span></div>
             <div className=''>
               <div className='w-[400px] font-sans text-[20px] font-light text-jala-gray-1'>Audited by the world’s leading security firms, security of Jalaswap is the highest priority.</div>
           </div>
+        </div>
+        <img src="/images/icons/background-icon2.svg"/>
         </div>
       </div>
       <div className="flex space-x-10 font-tight overflow-x-hidden">

@@ -23,9 +23,12 @@ export default function WhatWeDoSection() {
     </div>
     : 
     <div className="py-20">
-        <div className='flex justify-start items-center space-x-6 py-20'>
+        <div className='flex justify-between items-center py-20'>
+          <div className="flex items-center space-x-6">
             <div className="uppercase text-[80px] leading-[88px]  text-[#FF1D00]">WHAT WE DO</div>
-            <img className="h-12 object-cover" src="/images/icons/globe-icon.svg"></img>
+              <img className="h-12 object-cover" src="/images/icons/globe-icon.svg"></img>
+          </div>
+          <img src="/images/icons/background-icon.svg"/>
         </div>
         <div className='md:grid md:grid-cols-3'>
             <div className='flex flex-col items-start justify-evenly gap-y-10 '>
