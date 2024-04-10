@@ -1,10 +1,12 @@
 import { useCheckIsMobile } from "@/hooks/useCheckIsMobile"
 import { SectionDivider } from "./ui/SectionDivider";
 import Marquee from "react-fast-marquee";
+import { ChilizToken } from "./ui/ChilizToken";
 
 export default function TokenSection () {
     const isMobile = useCheckIsMobile();
 
+    
     type IdToUrlMap = {
         [key: number]: string;
       };
@@ -18,11 +20,10 @@ export default function TokenSection () {
         6: "/images/oc-token-img.svg",
       };
 
-
     return(
     <>{isMobile ? 
         <div className='w-full border-y  border-[#272A2A] px-[5%]'>
-            <SectionDivider/>
+            <SectionDivider isVertical={false} numbers={6}/>
             <div className='flex justify-start uppercase text-[48px] leading-[56px] font-medium text-start text-[#FF1D00]'>
                 <div className="w-[350px]">80+ real world-based <br/><span className='text-white'>fan tokens ready to be traded and staked.</span>
             </div>
@@ -31,12 +32,10 @@ export default function TokenSection () {
             <div className='flex justify-center items-center h-[400px] w-[350px] sm:w-[600px] md:w-[600px] '>
                     <Marquee pauseOnHover>
                     {[1, 2, 3, 4, 5].map((id: number) => (
-                        <img className="px-10  w-[200px]" key={id} src={idToUrlMap[id]} />
+                        <img className="px-10 opacity-50 w-[160px]" key={id} src={idToUrlMap[id]} />
                     ))}
                     </Marquee>
-                    <div className="absolute z-10">
-                        <img className="px-4 w-[350px]" src='/images/chiliz-logo.svg'></img>
-                    </div>
+                    <ChilizToken/>
             </div>
         </div>
         <div className='flex w-full justify-end uppercase text-[48px] leading-[56px] font-medium text-start text-white'>
@@ -44,35 +43,33 @@ export default function TokenSection () {
             <span className='text-[#FF1D00] '>earn token rewards.</span>
             </div>    
         </div>   
-        <SectionDivider/>
+        <SectionDivider isVertical={false} numbers={6}/>
 
     </div>
     :
     <div className=' border-y  border-[#272A2A] md:px-[20px] 2xl:px-[25px]'>
-        <SectionDivider/>
+        <SectionDivider isVertical={false} numbers={6}/>
         <div className="py-10">
             {/* Upper Title */}
             <div className='uppercase md:text-[76px]  2xl:text-[96px] leading-[104px] text-start text-[#FF1D00] md:w-[800px] 2xl:w-[1000px]'>
                 80+ real world-based 
-                <span className='text-white'>fan tokens ready to be traded and staked.</span>
+                <span className='text-white'> fan tokens ready to be traded and staked.</span>
             </div>
 
             <div className='flex justify-center items-center h-[600px] py-20'>
                 <Marquee pauseOnHover>
-                {[1, 2, 3, 4, 5].map((id: number) => (
-                    <img className="px-16" key={id} src={idToUrlMap[id]} />
+                {[1, 2, 3, 4, 5, 6].map((id: number) => (
+                    <img className="px-16 opacity-50" key={id} src={idToUrlMap[id]} />
                 ))}
                 </Marquee>
-                <div className="absolute z-10">
-                    <img className="px-4 w-[500px]" src='/images/chiliz-logo.svg'></img>
-                </div>
+                <ChilizToken/>
             </div>
             {/* Lower Title */}
             <div className="flex justify-end ">
                 <div className='uppercase md:text-[76px] 2xl:text-[96px] leading-[104px] text-start text-white  md:w-[700px] 2xl:w-[837px]'>Watch for the seasonal events and <span className='text-[#FF1D00] '>earn token rewards.</span></div>
             </div>
         </div>
-        <SectionDivider/>
+        <SectionDivider isVertical={false} numbers={6}/>
     </div>
     }
     </>

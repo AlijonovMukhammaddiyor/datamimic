@@ -1,149 +1,61 @@
-import { motion } from "framer-motion"
+import { motion,useAnimation } from "framer-motion"
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { useInView } from "react-intersection-observer";
+
+const container = {
+  hidden: { opacity: 1},
+  visible: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.4,
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1
+  }
+};
+
+const stadiums = [
+  "/images/Stadium1.svg", 
+  "/images/Stadium2.svg",
+  "/images/Stadium3.svg", 
+  "/images/Stadium4.svg",
+  "/images/Stadium5.svg",
+  "/images/Stadium6.svg",
+  "/images/Stadium7.svg"
+]
 
 export function StatdiumSection() {
-    const container = {
-        hidden: { opacity: 0 },
-        show: {
-          opacity: 1,
-          transition: {
-            delayChildren: 0
-          }
-        }
+  
+    const control = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+      if (inView) {
+        control.start("visible");
+      } else {
+        control.start("hidden");
       }
-      const container1 = {
-        hidden: { opacity: 0 },
-        show: {
-          opacity: 1,
-          transition: {
-            delayChildren: 0.2
-          }
-        }
-      }
-      const container2 = {
-        hidden: { opacity: 0 },
-        show: {
-          opacity: 1,
-          transition: {
-            delayChildren: 0.4
-          }
-        }
-      }
-      const container3 = {
-        hidden: { opacity: 0 },
-        show: {
-          opacity: 1,
-          transition: {
-            delayChildren: 0.6
-          }
-        }
-      }
-      const container4 = {
-        hidden: { opacity: 0 },
-        show: {
-          opacity: 1,
-          transition: {
-            delayChildren: 0.8
-          }
-        }
-      }
-      const container5 = {
-        hidden: { opacity: 0 },
-        show: {
-          opacity: 1,
-          transition: {
-            delayChildren: 1.0
-          }
-        }
-      }
-      const container6 = {
-        hidden: { opacity: 0 },
-        show: {
-          opacity: 1,
-          transition: {
-            delayChildren: 1.2
-          }
-        }
-      }
-      const item = {
-        hidden: { opacity: 0 },
-        show: { opacity: 1 }
-      }
+    }, [control, inView]);
 
       return (
-      <div className="flex justify-center h-[200px] md:h-[400px] 2xl:h-[500px]" >
-          <motion.ul
-          variants={container}
-          initial="hidden"
-          animate="show"
-          className="absolute "
-          >
-          <motion.li variants={item} >
-          <img src='/images/Stadium1.svg' className="px-[5%] md:px-[20%] 2xl:px-[5%]"  alt={""}/>
-          </motion.li>
+      <motion.ul 
+      ref={ref} 
+      initial="hidden"
+      variants={container}
+      animate={control}
+      className="flex justify-center h-[300px] md:h-[400px] 2xl:h-[500px]" >
+         {stadiums.map((url, index) => (
+            <motion.li key={index} variants={item} className='absolute'animate={{ y: `${index*15}px` }} >
+              <img src={url} className="px-[5%] lg:px-[350px] 2xl:px-[300px] " alt={""}/>
+            </motion.li>
+    ))}
         </motion.ul>
-        <motion.ul
-          variants={container1}
-          initial="hidden"
-          animate="show"
-          className="absolute translate-y-[10px]"
-        >
-          <motion.li variants={item} >
-          <img src='/images/Stadium2.svg'  className="px-[5%] md:px-[20%] 2xl:px-[5%]" alt={""}/>
-          </motion.li>
-        </motion.ul>
-        <motion.ul
-          variants={container2}
-          initial="hidden"
-          animate="show"
-          className="absolute translate-y-[20px]"
-        >
-          <motion.li variants={item} >
-          <img src='/images/Stadium3.svg' className="px-[5%] md:px-[20%] 2xl:px-[5%]" alt={""}/>
-          </motion.li>
-        </motion.ul>
-        <motion.ul
-          variants={container3}
-          initial="hidden"
-          animate="show"
-          className="absolute translate-y-[30px]"
-        >
-          <motion.li variants={item} >
-          <img src='/images/Stadium4.svg' className="px-[5%] md:px-[20%] 2xl:px-[5%]" alt={""}/>
-          </motion.li>
-        </motion.ul>
-        <motion.ul
-          variants={container4}
-          initial="hidden"
-          animate="show"
-          className="absolute translate-y-[40px]"
-        >
-          <motion.li variants={item} >
-          <img src='/images/Stadium5.svg' className="px-[5%] md:px-[20%] 2xl:px-[5%]" alt={""}/>
-          </motion.li>
-        </motion.ul>
-        <motion.ul
-          variants={container5}
-          initial="hidden"
-          animate="show"
-          className="absolute translate-y-[50px] "
-
-        >
-          <motion.li variants={item} >
-          <img src='/images/Stadium6.svg' className="px-[5%] md:px-[20%] 2xl:px-[5%]" alt={""}/>
-          </motion.li>
-        </motion.ul>
-        <motion.ul
-          variants={container6}
-          initial="hidden"
-          animate="show"
-          className="absolute translate-y-[60px]"
-        >
-          <motion.li variants={item} >
-          <img src='/images/Stadium7.svg'  className="px-[5%] md:px-[20%] 2xl:px-[5%]" alt={""}/>
-          </motion.li>
-        </motion.ul>
-        </div>
       )
 }

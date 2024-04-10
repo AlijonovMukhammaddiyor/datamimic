@@ -38,13 +38,14 @@ export function Header () {
         </div>
       </div>
       :
-      <div className='flex h-[72px] bg-bg-main border-b border-[#272A2A] text-[20px]   text-[#D3D3D3] leading-[28px]  font-medium  uppercase'>
+      <div className='flex md:h-[60px] 2xl:h-[72px] bg-bg-main border-b border-[#272A2A] text-[20px]   text-[#D3D3D3] leading-[28px]  font-medium  uppercase'>
         <Logo/>
         {/* [Auxili's Request]
         <div className="w-[18%] flex justify-center items-center border-r border-[#272A2A] space-x-2 ">
           <img className="h-4 xl:h-4" src="/images/icons/gov-icon.svg"/>        
           <div>Governance</div>
         </div>
+        
         */}
         <div className="w-[25%] lg:w-[20%] 2xl:w-[15%] flex justify-center items-center space-x-2 ">
           <HeaderTab title={"documentation"} imgUrl={"/images/icons/docs-icon.svg"}/>

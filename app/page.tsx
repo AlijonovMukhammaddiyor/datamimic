@@ -19,10 +19,11 @@ export default function Home() {
   }, []);
 
   return (
-    mounted && <div className="bg-bg-main text-white font-medium flex flex-col justify-start items-center overflow-x-hidden">
+    mounted && 
+    <div className="bg-bg-main text-white font-medium flex flex-col justify-start items-center ">
       {isMobile ? 
       <>
-        <div className="fixed w-full z-10 h-[5530px] overflow-y-hidden">
+        <div className="fixed w-full z-10">
           <img className="bg-repeat w-full " src="/images/jalaswap-landing-page-bg-mobile.svg"/>
         </div>
         <div className="fixed z-20 w-full bg-bg-main border-b border-[#272A2A]">
@@ -46,13 +47,16 @@ export default function Home() {
     </>
     :
     <>
-    <div className="fixed z-10 2xl:h-[6270px] md:h-[5000px] overflow-y-hidden ">
-      <img className="md:w-[1024px] 2xl:w-[1728px] bg-repeat-y " src="/images/jalaswap-landing-page-bg.svg"/>
+    <div className="fixed z-10 ">
+      <img className="md:w-[1024px] 2xl:w-[1440px] 3xl:w-[1728px] bg-contain bg-no-repeat overflow-hidden " src="/images/jalaswap-landing-page-bg.svg"/>
     </div>
-    <div className='md:w-[1024px] md:px-[85px] 2xl:w-[1728px] 2xl:px-[145px] fixed z-20 bg-bg-main h-[72px] border-b border-[#272A2A]'>
+    <div className='md:w-[1024px] 2xl:w-[1440px] 3xl:w-[1728px]  
+                    md:px-[85px] 2xl:px-[120px] 3xl:px-[145px] 
+                    fixed z-20 bg-bg-main md:text-[60px] 3xl:h-[72px] border-b border-[#272A2A]'>
       <Header/>
     </div>
-    <div className="z-10 2xl:w-[1728px] 2xl:px-[170px] md:w-[1024px] md:px-[105px]">
+    <div className="z-10 md:w-[1024px] 2xl:w-[1440px] 3xl:w-[1728px] 
+                        md:px-[105px] 2xl:px-[145px] 3xl:px-[170px] ">
       <TitleSection/>
     
       {/* cylinder section */}
@@ -60,13 +64,15 @@ export default function Home() {
       {/* whatwedo section */}
       <WhatWeDoSection/>
     </div>
-    <div className="z-10 2xl:w-[1728px] 2xl:px-[145px] md:w-[1024px] md:px-[85px]">
+    <div className="z-10 md:w-[1024px] 2xl:w-[1440px] 3xl:w-[1728px] 
+                        md:px-[85px] 2xl:px-[120px] 3xl:px-[145px] ">
       {/* token section */}
       <TokenSection/>
       {/* secure section */}
       <AssetSection/>
     </div>
-    <div className="z-10 2xl:w-[1728px] 2xl:px-[170px] md:w-[1024px] md:px-[105px]">
+    <div className="z-10 md:w-[1024px] 2xl:w-[1440px] 3xl:w-[1728px] 
+                        md:px-[105px] 2xl:px-[145px] 3xl:px-[170px] ">
       {/* partners section */}
       <PartnerSection/>
     </div>
@@ -74,11 +80,13 @@ export default function Home() {
       {/* news&update section */}
       {/* [Auxili's Request] <NewsSection/>*/}
 
-    <div className="z-10 2xl:w-[1728px] 2xl:px-[145px] md:w-[1024px] md:px-[85px]">
+    <div className="z-10 md:w-[1024px] 2xl:w-[1440px] 3xl:w-[1728px] 
+                        md:px-[85px] 2xl:px-[120px] 3xl:px-[145px] ">
       {/* game section */}
       <GameSection/>
     </div>
-    <div className="z-10 2xl:w-[1728px] 2xl:px-[170px] md:w-[1024px] md:px-[105px]">
+    <div className="z-10 md:w-[1024px] 2xl:w-[1440px] 3xl:w-[1728px] 
+                        md:px-[105px] 2xl:px-[145px] 3xl:px-[170px] ">
       {/* footer section */}
       <Footer/>
     </div>

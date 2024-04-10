@@ -16,7 +16,10 @@ const config: Config = {
       },
       fontFamily: {
         'tight' : ['InterTight']
-      }
+      },
+      screens: {
+        '3xl': '1728px',
+      },
     },
   },
   plugins: [
