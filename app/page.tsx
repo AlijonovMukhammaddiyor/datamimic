@@ -51,7 +51,7 @@ export default function Home() {
     </div>
     <div className='md:w-[1024px] 2xl:w-[1440px] 3xl:w-[1728px]  
                     md:px-[85px] 2xl:px-[120px] 3xl:px-[145px] 
-                    fixed z-20 bg-bg-main md:text-[60px] 3xl:h-[72px] border-b border-[#272A2A]'>
+                    fixed z-20 bg-bg-main md:text-[60px] 3xl:h-[72px]'>
       <Header/>
     </div>
     <div className="z-10 md:w-[1024px] 2xl:w-[1440px] 3xl:w-[1728px] 

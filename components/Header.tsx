@@ -47,7 +47,7 @@ export function Header () {
       {isMobile ? 
       <div
         onClick={() => setIsOpen(false)}
-        className='flex w-full h-[56px] bg-bg-main border-b border-[#272A2A] justify-between text-[20px] text-[#D3D3D3] leading-[28px]  font-medium  uppercase'>
+        className='flex w-full h-[56px] bg-bg-main  justify-between text-[20px] text-[#D3D3D3] leading-[28px]  font-medium  uppercase'>
         <Logo/>
         <div className="flex">
           <Link className="px-10 border-t border-x space-x-2  duration-500 border-[#272A2A] flex items-center justify-center
@@ -68,7 +68,7 @@ export function Header () {
         </Link>
           <div onClick={toggleMenu}
                   className="px-6  flex items-center justify-center  duration-500 
-                  border-transparent  border-b-2 border-[#272A2A] hover:border-b-2 hover:border-jala-red">
+                  border-transparent hover:border-b-2 hover:border-jala-red">
             <img src="/images/icons/hamburger-icon.svg"/>
           </div>
         </div>
