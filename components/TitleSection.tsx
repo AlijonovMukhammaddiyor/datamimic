@@ -27,9 +27,9 @@ export function TitleSection() {
       </div>
       :
       <>
-      <div className="flex justify-between absolute z-5 font-tight text-[12px] leading-[20px] text-[#595959]  
+      <div className="flex justify-between absolute z-5 font-tight text-[12px] leading-[20px] text-[#595959] pt-[100px]
                       md:h-[600px] 3xl:h-[900px] 
-                      md:w-[820px] 2xl:w-[1100px] 3xl:w-[1388px] pt-[100px]">
+                      md:w-[820px] 2xl:w-[1150px] 3xl:w-[1388px]">
         <SectionDivider isVertical={true} numbers={6}/>
         <SectionDivider isVertical={true} numbers={6}/>
       </div>

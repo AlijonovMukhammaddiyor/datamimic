@@ -22,7 +22,7 @@ export default function GameSection () {
       </>
         :
         <div className='w-full'>
-          <img className="absolute md:w-[855px] 2xl:w-[1174px] 3xl:w-fit" src="/images/bg-diagonal-line.svg"/>
+          <img className="absolute md:w-[855px] 2xl:w-[1200px] 3xl:w-fit" src="/images/bg-diagonal-line.svg"/>
           <div className=" border-t border-[#272A2A] px-[25px]">
             <SectionDivider isVertical={false} numbers={0}/>
             <div className='relative md:text-[120px] 2xl:text-[186px] leading-[100%] font-medium text-start py-6'>

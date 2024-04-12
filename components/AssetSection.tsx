@@ -4,6 +4,7 @@ import { motion, useScroll,
   useTransform
    } from "framer-motion";
 import AssetCard from "./ui/AssetCard";
+import Marquee from "react-fast-marquee";
 
 
 interface AssetProp {
@@ -59,10 +60,18 @@ export default function AssetSection() {
           <div className='w-[340px] text-lg font-tight font-light text-white'>Audited by the world’s leading security firms, security of Jalaswap is the highest priority.</div>
           */}
           </div>
-        <AssetCard key={0} logo={'/images/icons/nexus-icon.png'} title={"Nexus Mutual"} subtitle={'Crypto insturance'}/>
-      </>
-        :
-      <>
+          <div className="flex justify-center px-[10%]">
+            <div className="font-tight md:w-[760px] sm:w-[600px] w-[400px]">
+              <Marquee pauseOnHover>
+                {assetProps.map((asset, index) => (
+                  <AssetCard key={index} logo={asset.logo} title={asset.title} subtitle={asset.subtitle}/>
+                ))}
+              </Marquee>
+            </div>
+          </div>
+          </>
+            :
+          <>
       <div className='w-full space-y-20'>
           <div className="flex justify-between items-center">
             <div className='uppercase text-[80px] leading-[88px] text-start '>
@@ -80,11 +89,10 @@ export default function AssetSection() {
           </div>
           */
           }
-
       </div>
-      <div className="flex space-x-10 font-tight overflow-x-hidden">
+      <div className="flex font-tight overflow-x-hidden">
       {assetProps.map((asset, index) => (
-        <AssetCard key={index} logo={asset.logo} title={asset.title} subtitle={asset.subtitle}/>
+          <AssetCard key={index} logo={asset.logo} title={asset.title} subtitle={asset.subtitle}/>
       ))}
       </div>
       </>

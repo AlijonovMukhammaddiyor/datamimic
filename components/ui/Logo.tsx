@@ -18,13 +18,13 @@ export function Logo() {
         onMouseLeave={onMouseLeave}>    
         {isHovering ? 
         <Link 
-        href={""}
+        href={"/"}
         className="w-full h-full flex items-center justify-center  duration-500 bg-jala-white">
             <img src="/images/icons/jala-symbol-red.svg"/>
         </Link>
         :
         <Link 
-        href={""}
+        href={"/"}
         className="w-full h-full flex items-center justify-center duration-500 bg-jala-red">
             <img src="/images/icons/jala-symbol-white.svg"/>
         </Link>
@@ -36,13 +36,13 @@ export function Logo() {
         onMouseLeave={onMouseLeave}>    
         {isHovering ? 
         <Link 
-        href={""}
+        href={"/"}
         className="w-full h-full flex items-center justify-center  duration-500 bg-jala-white">
             <img src="/images/icons/jala-symbol-red.svg"/>
         </Link>
         :
         <Link 
-        href={""}
+        href={"/"}
         className="w-full h-full flex items-center justify-center duration-500 bg-jala-red">
             <img src="/images/icons/jala-symbol-white.svg"/>
         </Link>

@@ -3,18 +3,51 @@ import { Logo } from "./ui/Logo";
 import { HeaderTab } from "./ui/HeaderTab";
 import Link from "next/link";
 import { useState } from "react";
+import { NavigationItem } from "@/types";
 
 export function Header () {
   const isMobile = useCheckIsMobile();
-
+  const [isOpen, setIsOpen] = useState(false);
   const [isHovering, setIsHovered] = useState(false);
   const onMouseEnterLaunch = () => setIsHovered(true);
   const onMouseLeaveLaunch = () => setIsHovered(false);
   
+  const toggleMenu = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    e.stopPropagation(); // 이벤트 캡쳐링 방지
+    setIsOpen(prevState => !prevState);
+  }
+
+
+  const navigation: NavigationItem[] = [  
+    {
+      name: "DOCS",
+      href: "/",
+      icon : "/images/icons/docs-icon.svg"
+    },  
+    {
+      name: "DISCORD",
+      href: "/",
+      icon : "/images/icons/discord-icon.svg"
+    },  
+    {
+      name: "TWITTER",
+      href: "/",
+      icon : "/images/icons/x-icon.svg"
+    },  
+    {
+      name: "LEADERBOARD",
+      href: "/",
+      icon : "/images/icons/point-icon.svg"
+    },  
+  ]
+  
+
     return(
       <>
       {isMobile ? 
-      <div className='flex w-full h-[56px] bg-bg-main border-b border-[#272A2A] justify-between text-[20px] text-[#D3D3D3] leading-[28px]  font-medium  uppercase'>
+      <div
+        onClick={() => setIsOpen(false)}
+        className='flex w-full h-[56px] bg-bg-main border-b border-[#272A2A] justify-between text-[20px] text-[#D3D3D3] leading-[28px]  font-medium  uppercase'>
         <Logo/>
         <div className="flex">
           <Link className="px-10 border-t border-x space-x-2  duration-500 border-[#272A2A] flex items-center justify-center
@@ -33,9 +66,29 @@ export function Header () {
           </>          
         }
         </Link>
-          <div className="px-6  flex items-center justify-center  duration-500 border-transparent  border-b-2 border-[#272A2A]
-                  hover:border-b-2 hover:border-jala-red"><img src="/images/icons/hamburger-icon.png"/></div>
+          <div onClick={toggleMenu}
+                  className="px-6  flex items-center justify-center  duration-500 
+                  border-transparent  border-b-2 border-[#272A2A] hover:border-b-2 hover:border-jala-red">
+            <img src="/images/icons/hamburger-icon.svg"/>
+          </div>
         </div>
+        {isOpen ? 
+        <div className="absolute bg-bg-main right-0 top-[56px] min-h-screen w-full rounded-l-lg z-40">
+          <ul className="text-white h-screen w-full justify-start items-center">
+            {navigation.map((tab, index) => {
+              return(
+                <Link href={tab.href}>
+                <li className="border-b border-[#272A2A] p-4 flex justify-between">
+                  <div>{tab.name}</div>
+                  <img src={tab.icon}/>
+                </li> 
+              </Link>
+              )
+            })}
+          </ul>
+        </div>
+        :<></>
+      }
       </div>
       :
       <div className='flex md:h-[60px] 2xl:h-[72px] bg-bg-main border-b border-[#272A2A] text-[20px]   text-[#D3D3D3] leading-[28px]  font-medium  uppercase'>
@@ -45,13 +98,12 @@ export function Header () {
           <img className="h-4 xl:h-4" src="/images/icons/gov-icon.svg"/>        
           <div>Governance</div>
         </div>
-        
         */}
         <div className="w-[25%] lg:w-[20%] 2xl:w-[15%] flex justify-center items-center space-x-2 ">
           <HeaderTab title={"documentation"} imgUrl={"/images/icons/docs-icon.svg"}/>
         </div>
         <div className="w-[20%] lg:w-[15%] 2xl:w-[10%] flex justify-center items-center space-x-2 ">
-          <HeaderTab title={"discord"} imgUrl={"/images/icons/discord-icon.png"}/>
+          <HeaderTab title={"discord"} imgUrl={"/images/icons/discord-icon.svg"}/>
         </div>
         <div className="w-[20%] lg:w-[15%] 2xl:w-[10%] flex justify-center items-center space-x-2 ">
           <HeaderTab title={"twitter"} imgUrl={"/images/icons/x-icon.svg"}/>

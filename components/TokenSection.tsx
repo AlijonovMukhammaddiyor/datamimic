@@ -55,7 +55,6 @@ export default function TokenSection () {
                 80+ real world-based 
                 <span className='text-white'> fan tokens ready to be traded and staked.</span>
             </div>
-
             <div className='flex justify-center items-center h-[600px] py-20'>
                 <Marquee pauseOnHover>
                 {[1, 2, 3, 4, 5, 6].map((id: number) => (
