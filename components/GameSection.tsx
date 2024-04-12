@@ -13,7 +13,7 @@ export default function GameSection () {
         <img className="w-full absolute" src="/images/bg-diagonal-lines-mobile.svg"/>
         <div className='w-full  px-[5%]'>
             <SectionDivider isVertical={false} numbers={0}/>
-            <div className='relative text-[80px] leading-[88px] font-medium text-start pb-10'>
+            <div className='relative text-[80px] leading-[88px] font-medium text-start pb-[14%]'>
               <span className='text-[#FF1D00]'>KAYEN:</span>
               <br/>
               A NEW GAME.

@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     mounted && 
-    <div className="bg-bg-main text-white font-medium flex flex-col justify-start items-center ">
+    <div className="bg-bg-main text-white font-medium flex flex-col justify-start items-center">
       {isMobile ? 
       <>
         <div className="fixed w-full z-10">
@@ -45,8 +45,7 @@ export default function Home() {
       <Footer/>
       </div>
     </>
-    :
-    <>
+    :<>
     <div className="fixed z-10 ">
       <img className="md:w-[1024px] 2xl:w-[1440px] 3xl:w-[1728px] bg-contain bg-no-repeat overflow-hidden " src="/images/jalaswap-landing-page-bg.svg"/>
     </div>

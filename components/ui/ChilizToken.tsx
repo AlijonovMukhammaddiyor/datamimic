@@ -22,9 +22,9 @@ export function ChilizToken () {
                             <div className="flex absolute z-10 justify-center items-center rounded-full border border-jala-red bg-[#0F1212] bg-opacity-70 border-opacity-85
                                 w-[186px] lg:w-[343px] 2xl:w-[373px] h-[186px] lg:h-[343px] 2xl:h-[373px]">
                                 <div className="flex justify-center items-center rounded-full border border-jala-red bg-[#0F1212]
-                                w-[175px] lg:w-[322px] 2xl:w-[352px] h-[175px] lg:h-[322px] 2xl:h-[352px]">
+                                w-[170px] lg:w-[322px] 2xl:w-[352px] h-[170px] lg:h-[322px] 2xl:h-[352px]">
                                     <div className="flex justify-center items-center rounded-full border border-jala-red 
-                                        w-[160px] lg:w-[300px] 2xl:w-[330px] h-[160px] lg:h-[300px] 2xl:h-[330px]">
+                                        w-[155px] lg:w-[300px] 2xl:w-[330px] h-[155px] lg:h-[300px] 2xl:h-[330px]">
                                         <Link id="stadium-section" className="" href={""}
                                             onMouseEnter={onMouseEnterLaunch}
                                             onMouseLeave={onMouseLeaveLaunch}>    

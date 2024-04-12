@@ -61,7 +61,7 @@ export default function AssetSection() {
           */}
           </div>
           <div className="flex justify-center px-[10%]">
-            <div className="font-tight md:w-[760px] sm:w-[600px] w-[400px]">
+            <div className="font-tight md:w-[760px] sm:w-[600px] w-[300px] min-[450px]:w-[400px] min-[550px]:w-[500px]">
               <Marquee pauseOnHover>
                 {assetProps.map((asset, index) => (
                   <AssetCard key={index} logo={asset.logo} title={asset.title} subtitle={asset.subtitle}/>
