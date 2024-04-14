@@ -3,7 +3,8 @@ import { Logo } from "./ui/Logo";
 import { HeaderTab } from "./ui/HeaderTab";
 import Link from "next/link";
 import { useState } from "react";
-import { NavigationItem } from "@/types";
+import { NavigationItem } from "@/types/menu";
+import { DISCORD_LINK, MEDIUM_LINK, X_LINK } from "@/config/links";
 
 export function Header () {
   const isMobile = useCheckIsMobile();
@@ -21,17 +22,17 @@ export function Header () {
   const navigation: NavigationItem[] = [  
     {
       name: "DOCS",
-      href: "/",
+      href:  MEDIUM_LINK,
       icon : "/images/icons/docs-icon.svg"
     },  
     {
       name: "DISCORD",
-      href: "/",
+      href: DISCORD_LINK,
       icon : "/images/icons/discord-icon.svg"
     },  
     {
       name: "TWITTER",
-      href: "/",
+      href: X_LINK,
       icon : "/images/icons/x-icon.svg"
     },  
     {
@@ -91,7 +92,7 @@ export function Header () {
       }
       </div>
       :
-      <div className='flex md:h-[60px] 2xl:h-[72px] bg-bg-main border-b border-[#272A2A] text-[20px]   text-[#D3D3D3] leading-[28px]  font-medium  uppercase'>
+      <div className='flex md:h-[60px] 2xl:h-[72px] text-[20px]  text-[#D3D3D3] leading-[28px]  font-medium  uppercase'>
         <Logo/>
         {/* [Auxili's Request]
         <div className="w-[18%] flex justify-center items-center border-r border-[#272A2A] space-x-2 ">
@@ -99,20 +100,27 @@ export function Header () {
           <div>Governance</div>
         </div>
         */}
-        <div className="w-[25%] lg:w-[20%] 2xl:w-[15%] flex justify-center items-center space-x-2 ">
-          <HeaderTab title={"documentation"} imgUrl={"/images/icons/docs-icon.svg"}/>
-        </div>
-        <div className="w-[20%] lg:w-[15%] 2xl:w-[10%] flex justify-center items-center space-x-2 ">
-          <HeaderTab title={"discord"} imgUrl={"/images/icons/discord-icon.svg"}/>
-        </div>
-        <div className="w-[20%] lg:w-[15%] 2xl:w-[10%] flex justify-center items-center space-x-2 ">
-          <HeaderTab title={"twitter"} imgUrl={"/images/icons/x-icon.svg"}/>
-        </div>
-        <div className="w-[25%] lg:w-[20%] 2xl:w-[14%] flex justify-center items-center space-x-2 ">
-          <HeaderTab title={"leaderboard"} imgUrl={"/images/icons/point-icon.svg"}/>
-        </div>
+         {navigation.map((tab, index) => {
+              return(
+                <div className=" flex justify-center items-center space-x-2 mx-6">
+                <HeaderTab title={tab.name} imgUrl={tab.icon} href={tab.href}/>
+              </div>
+              )
+        })}
         <div className="w-[25%] lg:w-[30%] 2xl:w-[40%] flex justify-center items-center space-x-2"/>
         {/* [Auxili's Request]
+        <div className="w-[25%] lg:w-[20%] 2xl:w-[15%] ">
+          <HeaderTab title={"documentation"} imgUrl={"/images/icons/docs-icon.svg"} href={MEDIUM_LINK}/>
+        </div>
+        <div className="w-[20%] lg:w-[15%] 2xl:w-[10%] flex justify-center items-center space-x-2 ">
+          <HeaderTab title={"discord"} imgUrl={"/images/icons/discord-icon.svg"} href={DISCORD_LINK}/>
+        </div>
+        <div className="w-[20%] lg:w-[15%] 2xl:w-[10%] flex justify-center items-center space-x-2 ">
+          <HeaderTab title={"twitter"} imgUrl={"/images/icons/x-icon.svg"} href={X_LINK}/>
+        </div>
+        <div className="w-[25%] lg:w-[20%] 2xl:w-[14%] flex justify-center items-center space-x-2 ">
+          <HeaderTab title={"leaderboard"} imgUrl={"/images/icons/point-icon.svg"} href={""}/>
+        </div>
         <div className="w-[18%] flex justify-center items-center space-x-2">
           <img className="h-4 xl:h-4" src="/images/icons/community-icon.svg"/>        
           <div>community</div>

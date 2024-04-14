@@ -1,7 +1,7 @@
 import { useCheckIsMobile } from "@/hooks/useCheckIsMobile"
 import { SectionDivider } from "./ui/SectionDivider";
 import Marquee from "react-fast-marquee";
-import { ChilizToken } from "./ui/ChilizToken";
+import { JalaToken } from "./ui/JalaToken";
 
 export default function TokenSection () {
     const isMobile = useCheckIsMobile();
@@ -23,7 +23,7 @@ export default function TokenSection () {
     return(
     <>{isMobile ? 
         <div className='w-full border-y  border-[#272A2A] px-[5%]'>
-            <SectionDivider isVertical={false} numbers={6}/>
+            <SectionDivider isVertical={false} numbers={['01', '02', '03', '04', '05', '06']} mobileNumbers={['01', '02','03','04']}/>
             <div className='flex justify-start uppercase text-[48px] leading-[56px] font-medium text-start text-[#FF1D00]'>
                 <div className="w-[350px]">80+ real world-based <br/><span className='text-white'>fan tokens ready to be traded and staked.</span>
             </div>
@@ -35,7 +35,7 @@ export default function TokenSection () {
                         <img className="px-10 opacity-50 w-[160px]" key={id} src={idToUrlMap[id]} />
                     ))}
                     </Marquee>
-                    <ChilizToken/>
+                    <JalaToken/>
             </div>
         </div>
         <div className='flex w-full justify-end uppercase text-[48px] leading-[56px] font-medium text-start text-white'>
@@ -43,12 +43,12 @@ export default function TokenSection () {
             <span className='text-[#FF1D00] '>earn token rewards.</span>
             </div>    
         </div>   
-        <SectionDivider isVertical={false} numbers={6}/>
+        <SectionDivider isVertical={false} numbers={['01', '02', '03', '04', '05', '06']} mobileNumbers={['01', '02','03','04']}/>
 
     </div>
     :
     <div className=' border-y  border-[#272A2A] md:px-[20px] 2xl:px-[25px]'>
-        <SectionDivider isVertical={false} numbers={6}/>
+        <SectionDivider isVertical={false} numbers={['01', '02', '03', '04', '05', '06']} mobileNumbers={['01', '02','03','04']}/>
         <div className="py-10">
             {/* Upper Title */}
             <div className='uppercase md:text-[76px]  2xl:text-[96px] leading-[104px] text-start text-[#FF1D00] md:w-[800px] 2xl:w-[1000px]'>
@@ -61,14 +61,14 @@ export default function TokenSection () {
                     <img className="px-16 opacity-50" key={id} src={idToUrlMap[id]} />
                 ))}
                 </Marquee>
-                <ChilizToken/>
+                <JalaToken/>
             </div>
             {/* Lower Title */}
             <div className="flex justify-end ">
                 <div className='uppercase md:text-[76px] 2xl:text-[96px] leading-[104px] text-start text-white  md:w-[700px] 2xl:w-[837px]'>Watch for the seasonal events and <span className='text-[#FF1D00] '>earn token rewards.</span></div>
             </div>
         </div>
-        <SectionDivider isVertical={false} numbers={6}/>
+        <SectionDivider isVertical={false} numbers={['01', '02', '03', '04', '05', '06']} mobileNumbers={['01', '02','03','04']}/>
     </div>
     }
     </>

@@ -1,9 +1,5 @@
 import { useCheckIsMobile } from "@/hooks/useCheckIsMobile";
-import { motion, useScroll,
-  MotionProps,
-  useTransform
-   } from "framer-motion";
-import AssetCard from "./ui/AssetCard";
+import AssetCard from "@/components/ui/AssetCard";
 import Marquee from "react-fast-marquee";
 
 
@@ -14,24 +10,24 @@ interface AssetProp {
 }
 const assetProps : AssetProp[] = [
   {
-      title : 'Nexus Mutual',
+      title : 'Chiliz',
       subtitle : 'Crypto insturance',
-      logo : '/images/icons/nexus-icon.png',
+      logo : '/images/chiliz-logo.svg',
   },
   {
-      title : 'OpenZeppelin',
+      title : 'Socio',
       subtitle : 'Crypto insturance',
-      logo : '/images/icons/openzeppelin-icon.png',
+      logo : '/images/socio-logo.svg',
   },
   {
-      title : 'Immunefi',
+      title : 'Bitget',
       subtitle : 'Crypto insturance',
-      logo : '/images/icons/immunefi-icon.png',
+      logo : '/images/bitget-logo.svg',
   },
   {
-      title : 'Hacken',
+      title : 'Coin98',
       subtitle : 'Crypto insturance',
-      logo : '/images/icons/hacken-icon.png',
+      logo : '/images/coin98-logo.svg',
   },
   /*
   {

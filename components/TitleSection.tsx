@@ -30,8 +30,8 @@ export function TitleSection() {
       <div className="flex justify-between absolute z-5 font-tight text-[12px] leading-[20px] text-[#595959] pt-[100px]
                       md:h-[600px] 3xl:h-[900px] 
                       md:w-[820px] 2xl:w-[1150px] 3xl:w-[1388px]">
-        <SectionDivider isVertical={true} numbers={6}/>
-        <SectionDivider isVertical={true} numbers={6}/>
+        <SectionDivider isVertical={true} numbers={['01', '02', '03', '04', '05', '06']} mobileNumbers={['01', '02','03','04']}/>
+        <SectionDivider isVertical={true} numbers={['01', '02', '03', '04', '05', '06']} mobileNumbers={['01', '02','03','04']}/>
       </div>
       <div className=' w-full space-y-7 flex flex-col items-center justify-center font-bold md:py-[15%] 2xl:py-[11%] px-[30px]'>
         <Image  src={"/images/title.svg"} alt={""} width={2000} height={200}	className="w-full z-10"/>

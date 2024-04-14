@@ -9,24 +9,18 @@ import TokenSection from "@/components/TokenSection";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
 import { useCheckIsMobile } from "@/hooks/useCheckIsMobile";
 import { StatdiumSection } from "@/components/StatdiumSection";
-import { useEffect, useState } from "react";
 
 export default function Home() {
   const isMobile = useCheckIsMobile();
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+
 
   return (
-    mounted && 
-    <div className="bg-bg-main text-white font-medium flex flex-col justify-start items-center">
-      {isMobile ? 
+   isMobile ? 
       <>
         <div className="fixed w-full z-10">
           <img className="bg-repeat w-full " src="/images/jalaswap-landing-page-bg-mobile.svg"/>
         </div>
-        <div className="fixed z-20 w-full bg-bg-main border-b border-[#272A2A]">
+        <div className="fixed z-20 w-full bg-bg-main border-y border-[#272A2A]">
           <Header/>
         </div>
 
@@ -49,11 +43,15 @@ export default function Home() {
     <div className="fixed z-10 ">
       <img className="md:w-[1024px] 2xl:w-[1440px] 3xl:w-[1728px] bg-contain bg-no-repeat overflow-hidden " src="/images/jalaswap-landing-page-bg.svg"/>
     </div>
+    <div className='flex justify-center z-20 w-full md:h-[60px] 2xl:h-[72px] bg-bg-main border-b border-[#272A2A] fixed'>
     <div className='md:w-[1024px] 2xl:w-[1440px] 3xl:w-[1728px]  
                     md:px-[85px] 2xl:px-[120px] 3xl:px-[145px] 
-                    fixed z-20 bg-bg-main md:text-[60px] 3xl:h-[72px]'>
-      <Header/>
+                    md:text-[60px] 3xl:h-[72px]'>
+                            <Header/>
+
     </div>
+    </div>
+
     <div className="z-10 md:w-[1024px] 2xl:w-[1440px] 3xl:w-[1728px] 
                         md:px-[105px] 2xl:px-[145px] 3xl:px-[170px] ">
       <TitleSection/>
@@ -90,7 +88,5 @@ export default function Home() {
       <Footer/>
     </div>
     </>
-    }
-    </div>
   )
 }
