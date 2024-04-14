@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 
 
-export function ChilizToken () {
+export function JalaToken () {
     const [isHovering, setIsHovered] = useState(false);
     const onMouseEnterLaunch = () => setIsHovered(true);
     const onMouseLeaveLaunch = () => setIsHovered(false);
