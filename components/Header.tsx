@@ -100,16 +100,7 @@ export function Header () {
           <div>Governance</div>
         </div>
         */}
-         {navigation.map((tab, index) => {
-              return(
-                <div className=" flex justify-center items-center space-x-2 mx-6">
-                <HeaderTab title={tab.name} imgUrl={tab.icon} href={tab.href}/>
-              </div>
-              )
-        })}
-        <div className="w-[25%] lg:w-[30%] 2xl:w-[40%] flex justify-center items-center space-x-2"/>
-        {/* [Auxili's Request]
-        <div className="w-[25%] lg:w-[20%] 2xl:w-[15%] ">
+        <div className="w-[25%] lg:w-[20%] 2xl:w-[15%] flex justify-center items-center space-x-2 ">
           <HeaderTab title={"documentation"} imgUrl={"/images/icons/docs-icon.svg"} href={MEDIUM_LINK}/>
         </div>
         <div className="w-[20%] lg:w-[15%] 2xl:w-[10%] flex justify-center items-center space-x-2 ">
@@ -121,6 +112,8 @@ export function Header () {
         <div className="w-[25%] lg:w-[20%] 2xl:w-[14%] flex justify-center items-center space-x-2 ">
           <HeaderTab title={"leaderboard"} imgUrl={"/images/icons/point-icon.svg"} href={""}/>
         </div>
+        <div className="w-[25%] lg:w-[30%] 2xl:w-[40%] flex justify-center items-center space-x-2"/>
+        {/* [Auxili's Request]
         <div className="w-[18%] flex justify-center items-center space-x-2">
           <img className="h-4 xl:h-4" src="/images/icons/community-icon.svg"/>        
           <div>community</div>
