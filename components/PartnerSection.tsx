@@ -1,5 +1,4 @@
 import { useCheckIsMobile } from "@/hooks/useCheckIsMobile";
-import Link from "next/link";
 
 
 export default function PartnerSection () {
@@ -28,12 +27,12 @@ export default function PartnerSection () {
 
             </div>
             <div className='w-full flex flex-col justify-center gap-y-4 px-[5%]'>
-            <Link className='flex justify-center items-center text-center border border-[#272A2A] h-[160px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-700' href={""}>
+            <div className='flex justify-center items-center text-center border border-[#272A2A] h-[160px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-700'>
                     <img src='/images/sherlock-logo-with-title.svg'/>
-                </Link>
-                <Link className='flex justify-center items-center text-center border border-[#272A2A] h-[160px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-700' href={""}>
-                    <img src='/images/sherlock-logo-with-title.svg'/>
-                </Link>
+                </div>
+                <div className='flex justify-center items-center text-center border border-[#272A2A] h-[160px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-700'>
+                    <img src='/images/certik-logo-with-title.svg'/>
+                </div>
             </div>
         </div>
         :
@@ -56,12 +55,12 @@ export default function PartnerSection () {
                 }
             </div>
             <div className='w-full grid grid-cols-2 justify-center gap-x-4 gap-y-4'>
-                <Link className='flex justify-center items-center text-center border border-[#272A2A] md:h-[160px] 2xl:h-[200px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-700' href={""}>
+                <div className='flex justify-center items-center text-center border border-[#272A2A] md:h-[160px] 2xl:h-[200px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-700' >
                     <img src='/images/sherlock-logo-with-title.svg'/>
-                </Link>
-                <Link className='flex justify-center items-center text-center border border-[#272A2A] md:h-[160px] 2xl:h-[200px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-700' href={""}>
-                    <img src='/images/sherlock-logo-with-title.svg'/>
-                </Link>
+                </div>
+                <div className='flex justify-center items-center text-center border border-[#272A2A] md:h-[160px] 2xl:h-[200px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-700'>
+                    <img src='/images/certik-logo-with-title.svg'/>
+                </div>
             </div>
         </div>
     }

@@ -13,8 +13,10 @@ export function TitleSection() {
           <div className='text-center text-5xl font-medium'>Community-Driven DeFi Platform</div>
           */}
           <div className='space-y-5 py-6 flex flex-col items-center'>
-            <div className='flex w-[300px] sm:w-[350px] text-[#D3D3D3] text-center text-lg sm:text-xl font-tight font-light leading-[26px]'>
-              Community-Driven, DeFi Ecosystem 
+            <div className='flex w-[300px] sm:w-[330px] text-[#D3D3D3] text-center text-lg sm:text-xl font-tight font-light leading-[26px]'>
+                Community-Driven & All-In-One 
+                Sports DeFi Ecosystem
+              {/* Community-Driven, DeFi Ecosystem */}
               {/* [Request]
                 The first DEX on Chiliz to swap, wrap, provide liquidity and stake fan tokens.
               */}
@@ -28,8 +30,8 @@ export function TitleSection() {
       :
       <>
       <div className="flex justify-between absolute z-5 font-tight text-[12px] leading-[20px] text-[#595959] pt-[100px]
-                      md:h-[600px] 3xl:h-[900px] 
-                      md:w-[820px] 2xl:w-[1150px] 3xl:w-[1388px]">
+                      md:h-[500px] 2xl:h-[700px]  3xl:h-[900px] 
+                      md:w-[800px] 2xl:w-[1150px] 3xl:w-[1388px]">
         <SectionDivider isVertical={true} numbers={['01', '02', '03', '04', '05', '06']} mobileNumbers={['01', '02','03','04']}/>
         <SectionDivider isVertical={true} numbers={['01', '02', '03', '04', '05', '06']} mobileNumbers={['01', '02','03','04']}/>
       </div>
@@ -45,8 +47,10 @@ export function TitleSection() {
             </div>
             */}
             <div className='space-y-3 flex flex-col items-start'>
-              <div className='font-tight flex w-[300px] 2xl:w-[350px] text-[#D3D3D3] text-start text-md 2xl:text-xl font-light'>
-              Community-Driven, DeFi Ecosystem 
+              <div className='font-tight flex w-[250px] 2xl:w-[320px] text-[#D3D3D3] text-start text-md 2xl:text-xl font-light'>
+              Community-Driven & All-In-One 
+                Sports DeFi Ecosystem
+              {/* Community-Driven, DeFi Ecosystem */}
                 {/* [Request]
                 The first DEX on Chiliz to swap, wrap, provide liquidity and stake fan tokens.
                 */}

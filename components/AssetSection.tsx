@@ -19,37 +19,37 @@ const assetProps : AssetProp[] = [
       subtitle : 'Crypto insturance',
       logo : '/images/socio-logo.svg',
   },
-  {
+/* [Request] {
       title : 'Bitget',
       subtitle : 'Crypto insturance',
       logo : '/images/bitget-logo.svg',
   },
+*/
   {
       title : 'Coin98',
       subtitle : 'Crypto insturance',
       logo : '/images/coin98-logo.svg',
   },
-  /*
-  {
+/*  [Request] {
       title : 'Community Treasury',
       subtitle : 'Crypto insturance',
       logo : '/images/icons/openzeppelin-icon.png',
   },
-  */
+*/
 ]
 
 export default function AssetSection() {
   const isMobile = useCheckIsMobile();
 
   return(
-      <div className='w-full px-[25px] 2xl:py-10'>
+      <div className='w-full px-[5%] 2xl:py-10'>
       <section >
       {isMobile ? 
       <>
         <div className="space-y-4 py-16">
           <div className='uppercase text-[48px] leading-[56px] font-medium text-start'>
             <span className="text-white">Our </span>
-            <span className="text-[#FF1D00] ">Partners</span>
+            <span className="text-[#FF1D00] ">Collaboration</span>
           </div>
           {/* [Request]
           <div className='uppercase text-[48px] leading-[56px] font-medium text-start text-white '>Your assets,<br/><span className='text-jala-red'>secured.</span></div>
@@ -57,7 +57,7 @@ export default function AssetSection() {
           */}
           </div>
           <div className="flex justify-center px-[10%]">
-            <div className="font-tight md:w-[760px] sm:w-[600px] w-[300px] min-[450px]:w-[400px] min-[550px]:w-[500px]">
+            <div className="font-tight md:w-[760px] sm:w-[600px] w-[300px] min-[350px]:w-[300px] min-[450px]:w-[380px] min-[550px]:w-[500px]">
               <Marquee pauseOnHover>
                 {assetProps.map((asset, index) => (
                   <AssetCard key={index} logo={asset.logo} title={asset.title} subtitle={asset.subtitle}/>
@@ -72,7 +72,7 @@ export default function AssetSection() {
           <div className="flex justify-between items-center">
             <div className='uppercase text-[80px] leading-[88px] text-start '>
               <span className="text-white">Our </span>
-              <span className="text-[#FF1D00] ">Partners</span>
+              <span className="text-[#FF1D00] ">Collaboration</span>
             </div>
           <img src="/images/icons/background-icon2.svg"/>
         </div>
