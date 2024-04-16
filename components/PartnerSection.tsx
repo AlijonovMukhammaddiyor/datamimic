@@ -35,8 +35,13 @@ export default function PartnerSection () {
 
             </div>
             <div className='w-full flex flex-col justify-center gap-y-4 px-[5%]'>
-            <div className='flex justify-center items-center text-center border border-[#272A2A] h-[160px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-700'>
-                    <img src='/images/sherlock-logo-with-title.svg'/>
+            <div className='flex justify-center items-center text-center border border-[#272A2A] h-[160px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-700'
+                    onMouseEnter={onMouseEnterLaunchSherlock}
+                    onMouseLeave={onMouseLeaveLaunchSherlock}>   
+                    {isSherlockHovering ? 
+                        <img src='/images/sherlock-logo-with-title-hover.svg'/>
+                        :<img src='/images/sherlock-logo-with-title.svg'/>
+                        }
                 </div>
                 <div className='flex justify-center items-center text-center border border-[#272A2A] h-[160px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-700'>
                     <img src='/images/certik-logo-with-title.svg'/>

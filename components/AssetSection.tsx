@@ -11,23 +11,23 @@ interface AssetProp {
 const assetProps : AssetProp[] = [
   {
       title : 'Chiliz',
-      subtitle : 'Crypto insturance',
+      subtitle : 'Sports Blockchain',
       logo : '/images/chiliz-logo.svg',
   },
   {
       title : 'Socio',
-      subtitle : 'Crypto insturance',
+      subtitle : 'Chiliz Engagement Platform',
       logo : '/images/socio-logo.svg',
   },
 /* [Request] {
       title : 'Bitget',
-      subtitle : 'Crypto insturance',
+      subtitle : 'Non-Custodial Wallet',
       logo : '/images/bitget-logo.svg',
   },
 */
   {
       title : 'Coin98',
-      subtitle : 'Crypto insturance',
+      subtitle : 'Non-Custodial Wallet',
       logo : '/images/coin98-logo.svg',
   },
 /*  [Request] {

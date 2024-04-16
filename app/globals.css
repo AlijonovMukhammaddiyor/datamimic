@@ -23,7 +23,8 @@
 body {
   background-image: url("../public/images/kayen-landing-page-bg.svg");    
   background-repeat: repeat-x;
-  font-family: 'Druk Cyr', 'InterTight';
   background-size :auto; 
+
+  font-family: 'Druk Cyr', 'InterTight';
 }
 

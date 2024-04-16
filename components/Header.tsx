@@ -35,11 +35,11 @@ export function Header () {
       href: X_LINK,
       icon : "/images/icons/x-icon.svg"
     },  
-    {
+    /*{
       name: "LEADERBOARD",
       href: "/",
       icon : "/images/icons/point-icon.svg"
-    },  
+    },  */
   ]
   
 
