@@ -53,7 +53,7 @@ export function StatdiumSection() {
       className="flex justify-center h-[300px] md:h-[400px] 2xl:h-[500px]" >
          {stadiums.map((url, index) => (
             <motion.li key={index} variants={item} className='absolute'animate={{ y: `${index*15}px` }} >
-              <img src={url} className="w-[300px]  min-[450px]:w-[400px] min-[550px]:w-[500px] md:w-[750px] 2xl:w-[1100px] 3xl:w-[1360px]" alt={""}/>
+              <img src={url} className="w-[300px]  min-[450px]:w-[400px] min-[550px]:w-[500px] sm:w-[600px] md:w-[850px] xl:w-[1200px] 3xl:w-[1360px]" alt={""}/>
             </motion.li>
     ))}
         </motion.ul>

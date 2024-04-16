@@ -13,7 +13,7 @@ export function Logo() {
     
     return(
     <>{isMobile ? 
-        <div className="w-[76px] "
+        <div className="w-[76px]"
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}>    
         {isHovering ? 

@@ -23,19 +23,19 @@ export function TitleSection() {
             </div>
             <div className="flex text-jala-red font-mono space-x-2">
               <div className="font-tight font-medium text-[15px]">Powered By</div>
-              <Image width={54} height={44} src='/images/chiliz-img.svg' alt={""}/>
+              <Image width={54} height={44} src='/images/chiliz-logo-with-title.svg' alt={""}/>
             </div>
           </div>
       </div>
       :
       <>
-      <div className="flex justify-between absolute z-5 font-tight text-[12px] leading-[20px] text-[#595959] pt-[100px]
-                      md:h-[500px] 2xl:h-[700px]  3xl:h-[900px] 
-                      md:w-[800px] 2xl:w-[1150px] 3xl:w-[1388px]">
+      <div className="flex justify-between absolute z-5 font-tight text-[12px] leading-[20px] text-[#595959] pt-[40px]
+                      md:h-[500px] xl:h-[700px] 2xl:h-[900px] 
+                      md:w-[800px] xl:w-[1240px] 2xl:w-[1390px]">
         <SectionDivider isVertical={true} numbers={['01', '02', '03', '04', '05', '06']} mobileNumbers={['01', '02','03','04']}/>
         <SectionDivider isVertical={true} numbers={['01', '02', '03', '04', '05', '06']} mobileNumbers={['01', '02','03','04']}/>
       </div>
-      <div className=' w-full space-y-7 flex flex-col items-center justify-center font-bold md:py-[15%] 2xl:py-[11%] px-[30px]'>
+      <div className=' w-full space-y-7 flex flex-col items-center justify-center font-bold py-[7%] px-[30px]'>
         <Image  src={"/images/title.svg"} alt={""} width={2000} height={200}	className="w-full z-10"/>
         <div className="flex w-full justify-between items-center 2xl:items-end space-x-4">
           <div className='text-jala-red text-center text-[40px] 2xl:text-[72px] 3xl:text-[80px] leader-[96px] font-extrabold'>
@@ -57,7 +57,7 @@ export function TitleSection() {
                 </div>
               <div className="flex text-jala-red font-mono space-x-2">
                 <div className="font-tight font-medium text-[15px]">Powered By</div>
-                <Image width={54} height={44} src='/images/chiliz-img.svg' alt={""}/>
+                <Image width={54} height={44} src='/images/chiliz-logo-with-title.svg' alt={""}/>
             </div>
           </div>
         </div>

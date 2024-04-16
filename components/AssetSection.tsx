@@ -42,11 +42,11 @@ export default function AssetSection() {
   const isMobile = useCheckIsMobile();
 
   return(
-      <div className='w-full px-[5%] 2xl:py-10'>
+      <div className='w-full 2xl:py-10'>
       <section >
       {isMobile ? 
       <>
-        <div className="space-y-4 py-16">
+        <div className="px-[5%] space-y-4 py-16">
           <div className='uppercase text-[48px] leading-[56px] font-medium text-start'>
             <span className="text-white">Our </span>
             <span className="text-[#FF1D00] ">Collaboration</span>
@@ -68,7 +68,7 @@ export default function AssetSection() {
           </>
             :
           <>
-      <div className='w-full space-y-20'>
+      <div className='w-full px-[15px] space-y-20'>
           <div className="flex justify-between items-center">
             <div className='uppercase text-[80px] leading-[88px] text-start '>
               <span className="text-white">Our </span>

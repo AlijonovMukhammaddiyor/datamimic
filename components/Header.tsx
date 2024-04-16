@@ -52,7 +52,7 @@ export function Header () {
         <Logo/>
         <div className="flex">
           <Link className="px-10 border-t border-x space-x-2  duration-500 border-[#272A2A] flex items-center justify-center
-                 hover:bg-white hover:text-jala-red"  href={""}
+                 hover:bg-white hover:text-jala-red"  href={"https://app.kayen.org/swap"}
           onMouseEnter={onMouseEnterLaunch}
           onMouseLeave={onMouseLeaveLaunch}>    
           {isHovering ? 
@@ -79,7 +79,7 @@ export function Header () {
             {navigation.map((tab, index) => {
               return(
                 <Link href={tab.href}>
-                <li className="border-b border-[#272A2A] p-4 flex justify-between">
+                <li className=" p-4 flex justify-between">
                   <div>{tab.name}</div>
                   <img src={tab.icon}/>
                 </li> 
@@ -92,7 +92,7 @@ export function Header () {
       }
       </div>
       :
-      <div className='flex md:h-[60px] 2xl:h-[72px] text-[20px]  text-[#D3D3D3] leading-[28px]  font-medium  uppercase'>
+      <div className='flex md:h-[60px] xl:h-[72px] text-[20px]  text-[#D3D3D3] leading-[28px]  font-medium  uppercase'>
         <Logo/>
         {/* [Auxili's Request]
         <div className="w-[18%] flex justify-center items-center border-r border-[#272A2A] space-x-2 ">
@@ -120,7 +120,7 @@ export function Header () {
         </div>
         <div className="flex items-center w-[17%]"/>
         */}
-        <Link className="flex font-medium text-[16px] lg:text-[20px] leading-[28px] tracking-widest w-[179px]" href={""}>
+        <Link className="flex font-medium text-[16px] lg:text-[20px] leading-[28px] tracking-widest w-[179px]" href={"https://app.kayen.org/swap"}>
         <div className="w-full space-x-2 flex items-center justify-center
                   bg-jala-red text-white 
                  hover:bg-white hover:text-jala-red duration-500"

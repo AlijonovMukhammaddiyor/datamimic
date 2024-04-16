@@ -15,8 +15,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="bg-bg-main text-white font-medium flex flex-col justify-start items-center">
-          {children}
+        <div className=" text-white font-medium flex flex-col items-center overflow-x-hidden">
+          <div className='border-b border-[#272A2A] h-[57px] xl:h-[72px] w-full fixed bg-bg-main'/>
+          <div className='flex flex-col justify-center
+                          border-x border-[#272A2A] 
+                          2xl:w-[1440px] xl:w-[1280px] lg:w-[1024px]'>
+            {children}
+          </div>
         </div>
       </body>
     </html>

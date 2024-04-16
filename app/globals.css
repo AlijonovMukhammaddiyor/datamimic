@@ -21,13 +21,9 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-    font-family: 'Druk Cyr', 'InterTight';
-
+  background-image: url("../public/images/kayen-landing-page-bg.svg");    
+  background-repeat: repeat-x;
+  font-family: 'Druk Cyr', 'InterTight';
+  background-size :auto; 
 }
+

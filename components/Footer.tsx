@@ -7,10 +7,13 @@ export default function Footer () {
     return(
       <>
       {isMobile ? 
-      <div className='w-full h-[246px] flex flex-col space-y-10 justify-center items-center'>
+      <div className='w-full h-[246px] flex flex-col space-y-10 justify-center items-center font-tight font-light text-[14px]  text-[#D3D3D3]'>
         <Link href={"/"}>
           <img src='/images/jala-symbol-img.png'/>
         </Link>
+        <div>
+        KAYEN Protocol • Copyright 2024
+        </div>
         <div className='flex space-x-4'>
           <Link href={MEDIUM_LINK}>
             <img className="w-5" src='/images/icons/medium-icon.svg'/>
@@ -27,10 +30,13 @@ export default function Footer () {
         </div>
       </div>
       :
-      <div className='w-full h-[188px] flex justify-between items-center'>
+      <div className='w-full h-[188px] flex justify-between items-center font-tight font-light text-[14px] text-[#D3D3D3]'>
         <Link href={"/"}>
           <img src='/images/jala-symbol-img.png'/>
         </Link>
+        <div>
+        KAYEN Protocol • Copyright 2024
+        </div>
         <div className='flex space-x-2'>
           <Link href={MEDIUM_LINK}>
             <img className="w-5" src='/images/icons/medium-icon.svg'/>
