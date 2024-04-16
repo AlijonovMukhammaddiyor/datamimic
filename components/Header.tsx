@@ -48,7 +48,7 @@ export function Header () {
       {isMobile ? 
       <div
         onClick={() => setIsOpen(false)}
-        className='flex w-full h-[56px] bg-bg-main  justify-between text-[20px] text-[#D3D3D3] leading-[28px]  font-medium  uppercase'>
+        className='flex w-full h-[59px] bg-bg-main  justify-between text-[20px] text-[#D3D3D3] leading-[28px]  font-medium  uppercase'>
         <Logo/>
         <div className="flex">
           <Link className="px-10 border-t border-x space-x-2  duration-500 border-[#272A2A] flex items-center justify-center
@@ -74,7 +74,7 @@ export function Header () {
           </div>
         </div>
         {isOpen ? 
-        <div className="absolute bg-bg-main right-0 top-[56px] min-h-screen w-full rounded-l-lg z-40">
+        <div className="absolute bg-bg-main right-0 top-[60px] min-h-screen w-full rounded-l-lg z-40">
           <ul className="text-white h-screen w-full justify-start items-center">
             {navigation.map((tab, index) => {
               return(

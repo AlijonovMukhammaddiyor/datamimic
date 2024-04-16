@@ -68,7 +68,7 @@ export default function AssetSection() {
           </>
             :
           <>
-      <div className='w-full px-[15px] space-y-20'>
+      <div className='w-full px-[20px] space-y-20'>
           <div className="flex justify-between items-center">
             <div className='uppercase text-[80px] leading-[88px] text-start '>
               <span className="text-white">Our </span>

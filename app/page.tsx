@@ -49,7 +49,7 @@ export default function Home() {
                     md:h-[60px] xl:h-[72px]'>
       <div className='fixed z-40 bg-bg-main
                       2xl:w-[1440px] xl:w-[1280px] lg:w-[1024px] 
-                      h-[57px] xl:h-[73px] border-b border-[#272A2A] '>
+                      h-[60px] xl:h-[73px] border-b border-[#272A2A] '>
         <Header/>
       </div>
     </div>
@@ -60,6 +60,9 @@ export default function Home() {
       <StatdiumSection/>
       {/* whatwedo section */}
       <WhatWeDoSection/>
+      </div>
+      <div className="z-10 ">
+
       {/* token section */}
       <TokenSection/>
       {/* secure section */}
@@ -72,7 +75,8 @@ export default function Home() {
       <GameSection/>
       {/* footer section */}
       <Footer/>
-    </div>
+      </div>
+
     </>
   )
 }

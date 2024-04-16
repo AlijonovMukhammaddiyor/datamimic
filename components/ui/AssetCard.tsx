@@ -4,7 +4,7 @@ export default function AssetCard ({logo, title, subtitle} : {logo: string, titl
     return(
       <div className="px-4">
         <div className='font-tight border border-[#272A2A] duration-1000 hover:border-jala-red shadow-sm hover:shadow-jala-red 
-                            w-[300px] h-[424px] sm:w-[300px] sm:h-[424px] md:w-[170px]  md:h-[284px] 2xl:w-[250px] 2xl:h-[380px]  3xl:w-[300px] 3xl:h-[424px]
+                            w-[300px] h-[424px] sm:w-[300px] sm:h-[424px] md:w-[250px] md:h-[380px] 3xl:w-[300px] 3xl:h-[424px]
                             flex flex-col justify-between bg-[#0F1212]'>
               <img className='h-5 w-5' src='/images/icons/icon.png'/>
               <div className='px-7 flex flex-col justify-between h-full'>

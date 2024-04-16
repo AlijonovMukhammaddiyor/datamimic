@@ -44,7 +44,7 @@ export default function PartnerSection () {
             </div>
         </div>
         :
-        <div className='w-full space-y-8 py-32'>
+        <div className='w-full space-y-8 py-32  px-[20px]'>
             <div className=' flex flex-col justify-center'>
                 <div className="flex justify-between items-center">
                     <div className='uppercase text-[80px] leading-[88px] text-start '>
@@ -63,7 +63,7 @@ export default function PartnerSection () {
                 }
             </div>
             <div className='w-full grid grid-cols-2 justify-center gap-x-4 gap-y-4'>
-                <div className='flex justify-center items-center text-center border border-[#272A2A] md:h-[160px] 2xl:h-[200px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-500' 
+                <div className='flex justify-center items-center text-center border border-[#272A2A] md:h-[160px] 2xl:h-[200px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-300' 
                     onMouseEnter={onMouseEnterLaunchSherlock}
                     onMouseLeave={onMouseLeaveLaunchSherlock}>   
                     {isSherlockHovering ? 
@@ -71,7 +71,7 @@ export default function PartnerSection () {
                         :<img src='/images/sherlock-logo-with-title.svg'/>
                         }
                 </div>
-                <div className='flex justify-center items-center text-center border border-[#272A2A] md:h-[160px] 2xl:h-[200px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-500'>
+                <div className='flex justify-center items-center text-center border border-[#272A2A] md:h-[160px] 2xl:h-[200px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-300'>
                     <img src='/images/certik-logo-with-title-hover.svg'/>
                 </div>
             </div>

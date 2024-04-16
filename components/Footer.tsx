@@ -30,7 +30,7 @@ export default function Footer () {
         </div>
       </div>
       :
-      <div className='w-full h-[188px] flex justify-between items-center font-tight font-light text-[14px] text-[#D3D3D3]'>
+      <div className=' px-[20px] w-full h-[188px] flex justify-between items-center font-tight font-light text-[14px] text-[#D3D3D3]'>
         <Link href={"/"}>
           <img src='/images/jala-symbol-img.png'/>
         </Link>

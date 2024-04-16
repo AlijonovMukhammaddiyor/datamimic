@@ -31,7 +31,7 @@ export function TitleSection() {
       <>
       <div className="flex justify-between absolute z-5 font-tight text-[12px] leading-[20px] text-[#595959] pt-[40px]
                       md:h-[500px] xl:h-[700px] 2xl:h-[900px] 
-                      md:w-[800px] xl:w-[1240px] 2xl:w-[1390px]">
+                      md:w-[980px] xl:w-[1240px] 2xl:w-[1390px]">
         <SectionDivider isVertical={true} numbers={['01', '02', '03', '04', '05', '06']} mobileNumbers={['01', '02','03','04']}/>
         <SectionDivider isVertical={true} numbers={['01', '02', '03', '04', '05', '06']} mobileNumbers={['01', '02','03','04']}/>
       </div>

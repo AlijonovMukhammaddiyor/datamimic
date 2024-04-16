@@ -47,7 +47,7 @@ export default function TokenSection () {
 
     </div>
     :
-    <div className=' border-y  border-[#272A2A] md:px-[20px] 2xl:px-[25px]'>
+    <div className=' border-y  border-[#272A2A] md:px-[25px]'>
         <SectionDivider isVertical={false} numbers={['01', '02', '03', '04', '05', '06']} mobileNumbers={['01', '02','03','04']}/>
         <div className="py-10">
             {/* Upper Title */}
