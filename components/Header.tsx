@@ -4,7 +4,7 @@ import { HeaderTab } from "./ui/HeaderTab";
 import Link from "next/link";
 import { useState } from "react";
 import { NavigationItem } from "@/types/menu";
-import { DISCORD_LINK, MEDIUM_LINK, X_LINK } from "@/config/links";
+import { DISCORD_LINK, MEDIUM_LINK, SWAP_PRODUCT_LINK, X_LINK } from "@/config/links";
 
 export function Header () {
   const isMobile = useCheckIsMobile();
@@ -52,7 +52,7 @@ export function Header () {
         <Logo/>
         <div className="flex">
           <Link className="px-10 border-t border-x space-x-2  duration-500 border-[#272A2A] flex items-center justify-center
-                 hover:bg-white hover:text-jala-red"  href={"https://app.kayen.org/swap"}
+                 hover:bg-white hover:text-jala-red"  href={SWAP_PRODUCT_LINK}
           onMouseEnter={onMouseEnterLaunch}
           onMouseLeave={onMouseLeaveLaunch}>    
           {isHovering ? 
@@ -68,8 +68,8 @@ export function Header () {
         }
         </Link>
           <div onClick={toggleMenu}
-                  className="px-6  flex items-center justify-center  duration-500 
-                  border-transparent hover:border-b-2 hover:border-jala-red">
+                  className="px-6  flex items-center justify-center duration-500 
+                  border-transparent border-b-2 hover:border-b-2 hover:border-jala-red">
             <img src="/images/icons/hamburger-icon.svg"/>
           </div>
         </div>
@@ -78,7 +78,7 @@ export function Header () {
           <ul className="text-white h-screen w-full justify-start items-center">
             {navigation.map((tab, index) => {
               return(
-                <Link href={tab.href}>
+                <Link key={index} href={tab.href}>
                 <li className=" p-4 flex justify-between">
                   <div>{tab.name}</div>
                   <img src={tab.icon}/>
@@ -109,9 +109,11 @@ export function Header () {
         <div className="w-[20%] lg:w-[15%] 2xl:w-[10%] flex justify-center items-center space-x-2 ">
           <HeaderTab title={"twitter"} imgUrl={"/images/icons/x-icon.svg"} href={X_LINK}/>
         </div>
+        {/* [Auxili's Request]
         <div className="w-[25%] lg:w-[20%] 2xl:w-[14%] flex justify-center items-center space-x-2 ">
           <HeaderTab title={"leaderboard"} imgUrl={"/images/icons/point-icon.svg"} href={""}/>
         </div>
+        */}
         <div className="w-[25%] lg:w-[30%] 2xl:w-[40%] flex justify-center items-center space-x-2"/>
         {/* [Auxili's Request]
         <div className="w-[18%] flex justify-center items-center space-x-2">
@@ -120,7 +122,7 @@ export function Header () {
         </div>
         <div className="flex items-center w-[17%]"/>
         */}
-        <Link className="flex font-medium text-[16px] lg:text-[20px] leading-[28px] tracking-widest w-[179px]" href={"https://app.kayen.org/swap"}>
+        <Link className="flex font-medium text-[16px] lg:text-[20px] leading-[28px] tracking-widest w-[179px]" href={SWAP_PRODUCT_LINK}>
         <div className="w-full space-x-2 flex items-center justify-center
                   bg-jala-red text-white 
                  hover:bg-white hover:text-jala-red duration-500"

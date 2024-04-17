@@ -29,7 +29,7 @@ export default function Home() {
               <Header/>
             </div>
           </div>
-        <div className="relative z-10 space-y-16">
+        <div className="relative z-10 space-y-16 ">
           <TitleSection/>
           <StatdiumSection/>
           <WhatWeDoSection/>

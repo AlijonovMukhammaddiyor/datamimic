@@ -1,3 +1,4 @@
+import { SWAP_PRODUCT_LINK } from "@/config/links";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -25,7 +26,7 @@ export function JalaToken () {
                                 w-[170px] lg:w-[322px] 2xl:w-[352px] h-[170px] lg:h-[322px] 2xl:h-[352px]">
                                     <div className="flex justify-center items-center rounded-full border border-jala-red 
                                         w-[155px] lg:w-[300px] 2xl:w-[330px] h-[155px] lg:h-[300px] 2xl:h-[330px]">
-                                        <Link id="stadium-section" href={"https://app.kayen.org/swap"}
+                                        <Link id="stadium-section" href={SWAP_PRODUCT_LINK}
                                             onMouseEnter={onMouseEnterLaunch}
                                             onMouseLeave={onMouseLeaveLaunch}
                                             className="duration-700 flex justify-center items-center 
