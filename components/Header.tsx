@@ -92,7 +92,7 @@ export function Header () {
       }
       </div>
       :
-      <div className='flex md:h-[60px] xl:h-[72px] text-[20px]  text-[#D3D3D3] leading-[28px]  font-medium  uppercase'>
+      <div className='flex justify-between md:h-[60px] xl:h-[72px] text-[20px]  text-[#D3D3D3] leading-[28px]  font-medium  uppercase'>
         <Logo/>
         {/* [Auxili's Request]
         <div className="w-[18%] flex justify-center items-center border-r border-[#272A2A] space-x-2 ">
