@@ -15,7 +15,7 @@ const assetProps : AssetProp[] = [
       logo : '/images/chiliz-logo.svg',
   },
   {
-      title : 'Socio',
+      title : 'Socios',
       subtitle : 'Chiliz Engagement Platform',
       logo : '/images/socio-logo.svg',
   },
