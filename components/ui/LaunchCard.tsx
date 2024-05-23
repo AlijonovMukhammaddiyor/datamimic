@@ -19,7 +19,7 @@ export function LaunchCard ({isLaunched, title, index, description}:{isLaunched:
             <div className='flex items-center space-x-3 pb-4'>
                 <img className='h-3 w-3' src='/images/icons/icon.png'/>
                 <div className='font-tight text-jala-red text-[14px] leading-[22px] tracking-[20%] font-semibold'>
-                    {isLaunched? "LAUNCHED" : "COMMING SOON"}
+                    {isLaunched? "LAUNCHED" : "COMING SOON"}
                 </div>
                 </div>
                 <div className='flex items-center space-x-2 duration-500'>
@@ -35,7 +35,7 @@ export function LaunchCard ({isLaunched, title, index, description}:{isLaunched:
             <div className='flex items-center space-x-3 pb-4'>
                 <img className='h-3 w-3' src='/images/icons/icon.png'/>
                 <div className='font-tight text-jala-red text-[14px] leading-[22px] tracking-[20%] font-semibold'>
-                    {isLaunched? "LAUNCHED" : "COMMING SOON"}
+                    {isLaunched? "LAUNCHED" : "COMING SOON"}
                 </div>
                 </div>
                 <div className='flex items-center space-x-2  duration-500'>
