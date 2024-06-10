@@ -4,7 +4,7 @@ import { HeaderTab } from "./ui/HeaderTab";
 import Link from "next/link";
 import { useState } from "react";
 import { NavigationItem } from "@/types/menu";
-import { DISCORD_LINK, MEDIUM_LINK, SWAP_PRODUCT_LINK, X_LINK } from "@/config/links";
+import { DISCORD_LINK, DOCS_LINK, MEDIUM_LINK, SWAP_PRODUCT_LINK, X_LINK } from "@/config/links";
 
 export function Header () {
   const isMobile = useCheckIsMobile();
@@ -22,7 +22,7 @@ export function Header () {
   const navigation: NavigationItem[] = [  
     {
       name: "DOCS",
-      href:  MEDIUM_LINK,
+      href:  DOCS_LINK,
       icon : "/images/icons/docs-icon.svg"
     },  
     {
@@ -101,7 +101,7 @@ export function Header () {
         </div>
         */}
         <div className="w-[25%] lg:w-[20%] 2xl:w-[15%] flex justify-center items-center space-x-2 ">
-          <HeaderTab title={"documentation"} imgUrl={"/images/icons/docs-icon.svg"} href={MEDIUM_LINK}/>
+          <HeaderTab title={"documentation"} imgUrl={"/images/icons/docs-icon.svg"} href={DOCS_LINK}/>
         </div>
         <div className="w-[20%] lg:w-[15%] 2xl:w-[10%] flex justify-center items-center space-x-2 ">
           <HeaderTab title={"discord"} imgUrl={"/images/icons/discord-icon.svg"} href={DISCORD_LINK}/>
