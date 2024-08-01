@@ -13,10 +13,9 @@ export default function TokenSection () {
     
       const idToUrlMap: IdToUrlMap = {
         1: "https://assets.chiliz.com/partner/c2d54ced-43c2-43e2-9d58-66684f02afb2/partner_logo/9bac0d35-de61-4265-9fc9-2641aa8a74fb.png?version=1674723871",
-        2: "https://assets.chiliz.com/partner/4f9e8350-e68c-4874-91b0-3c30a0be3866/partner_logo/e8cf8af8-7ede-47f6-9a8a-90bd9a22e725.png?version=1674725692",
         3: "https://assets.chiliz.com/partner/a0ad0a62-728b-4634-bf69-b3cf23435527/partner_logo/63ced28f-9dea-4e56-a904-66df8a332016.png?version=1674722272",
         4: "https://assets.chiliz.com/partner/99dd7cc7-80a6-4728-84ea-fd96203fc223/partner_logo/b94be562-d5cd-4b43-bc97-e6565847f659.png?version=1674725743",
-        5: "https://assets.chiliz.com/partner/3c79d471-a7ef-4616-983e-b1a61d4eb6e0/partner_logo/1b49c720-104c-4168-94b4-2080e9dc8476.png?version=1674724708",
+        5: "https://assets.chiliz.com/partner/3c79d471-a7ef-4616-983e-b1a61d4eb6e0/partner_logo/91f3f29a-b6f4-4bd4-919c-112c412cf2bd.png?version=1721659943",
         6: "https://assets.chiliz.com/partner/e28dfba1-10dd-42d6-8d50-1b5260fc296c/partner_logo/2f1bdb0c-0daf-4493-9c2a-30f853910016.png?version=1695892182",
         7: "https://assets.chiliz.com/partner/fc00f3c8-1f85-4bb6-bf73-c6a5c51c0131/partner_logo/c7bcca14-52ef-4e83-bfcd-cac8a9f5a307.png?version=1674726128",
         8: "https://assets.chiliz.com/partner/faebf0a5-1269-4935-a265-169caf483d6e/partner_logo/fc2755af-4d1b-49ce-839a-06c68016d369.png?version=1674724336",
