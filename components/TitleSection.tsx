@@ -22,8 +22,8 @@ export function TitleSection() {
               */}
             </div>
             <div className="flex text-jala-red font-mono space-x-2">
-              <div className="font-tight font-medium text-[15px]">Powered By</div>
-              <Image width={54} height={44} src="/images/chiliz-logo-with-title.svg" alt={""} />
+              {/* <div className="font-tight font-medium text-[15px]">Powered By</div> */}
+              <Image width={150} height={50} src="/images/powered-by-chiliz-white.svg" alt={""} />
             </div>
           </div>
         </div>
@@ -58,15 +58,15 @@ export function TitleSection() {
             */}
               <div className="space-y-3 flex flex-col items-start">
                 <div className="font-tight flex w-[250px] 2xl:w-[320px] text-[#D3D3D3] text-start text-md 2xl:text-xl font-light">
-                  Community-Driven & All-In-One Sports DeFi Ecosystem
+                  Community-Driven Sports DeFi Ecosystem
                   {/* Community-Driven, DeFi Ecosystem */}
                   {/* [Request]
                 The first DEX on Chiliz to swap, wrap, provide liquidity and stake fan tokens.
                 */}
                 </div>
                 <div className="flex text-jala-red font-mono space-x-2">
-                  <div className="font-tight font-medium text-[15px]">Powered By</div>
-                  <Image width={54} height={44} src="/images/chiliz-logo-with-title.svg" alt={""} />
+                  {/* <div className="font-tight font-medium text-[15px]">Powered By</div> */}
+                  <Image width={150} height={50} src="/images/powered-by-chiliz-white.svg" alt={""} />
                 </div>
               </div>
             </div>
