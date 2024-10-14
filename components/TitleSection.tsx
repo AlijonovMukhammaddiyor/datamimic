@@ -23,7 +23,7 @@ export function TitleSection() {
             </div>
             <div className="flex text-jala-red font-mono space-x-2">
               {/* <div className="font-tight font-medium text-[15px]">Powered By</div> */}
-              <Image width={150} height={50} src="/images/powered-by-chiliz-white.svg" alt={""} />
+              <Image width={150} height={50} src="/images/powered-by-chiliz-white.png" alt={""} />
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@ export function TitleSection() {
                 </div>
                 <div className="flex text-jala-red font-mono space-x-2">
                   {/* <div className="font-tight font-medium text-[15px]">Powered By</div> */}
-                  <Image width={150} height={50} src="/images/powered-by-chiliz-white.svg" alt={""} />
+                  <Image width={150} height={50} src="/images/powered-by-chiliz-white.png" alt={""} />
                 </div>
               </div>
             </div>
