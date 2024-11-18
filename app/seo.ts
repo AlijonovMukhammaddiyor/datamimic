@@ -56,21 +56,33 @@ export const getSectionMetadata = (section: string): Metadata => {
   const baseMetadata = getDefaultMetadata();
 
   const sectionConfigs: Record<string, Metadata> = {
-    swap: {
-      title: "Swap | Trade Fan Tokens on Kayen",
+    trade: {
+      title: "Trade | Kayen Protocol",
       description: "Swap or provide liquidity for Fan Tokens on the Kayen Protocol.",
+      alternates: {
+        canonical: "https://app.kayen.org/trade",
+      },
     },
-    pool: {
-      title: "Pool | Provide Liquidity on Kayen",
-      description: "Provide liquidity and earn rewards on the Kayen Protocol.",
+    pools: {
+      title: "Pools | Kayen Protocol",
+      description: "Provide liquidity and earn rewards on the Kayen Protocol",
+      alternates: {
+        canonical: "https://app.kayen.org",
+      },
     },
-    explore: {
-      title: "Explore | Discover Fan Tokens on Kayen",
-      description: "Explore available Fan Tokens and trading opportunities on Kayen.",
+    offside: {
+      title: "Offside | Kayen Protocol",
+      description: "Explore Kayen's Offside feature for advanced trading.",
+      alternates: {
+        canonical: "https://app.kayen.org/offside",
+      },
     },
-    docs: {
-      title: "Documentation | Kayen Protocol",
-      description: "Learn about Kayen Protocol. Technical documentation, guides, and API references.",
+    league: {
+      title: "League | Kayen Protocol",
+      description: "Join Kayen's League for enhanced trading opportunities.",
+      alternates: {
+        canonical: "https://app.kayen.org/league",
+      },
     },
   };
 

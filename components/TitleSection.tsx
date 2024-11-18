@@ -8,7 +8,7 @@ export function TitleSection() {
     <>
       {isMobile ? (
         <div className="w-full space-y-5 flex flex-col items-center justify-center font-bold pt-32 px-[5%]">
-          <img src={"/images/title.svg"} alt={""} className=" w-full" />
+          <img src={"/images/title.svg"} alt="title" className=" w-full" />
           <div className="text-center text-5xl font-medium text-jala-red">SPORTS MEETS WEB3</div>
           {/* [Request]
           <div className='text-center text-5xl font-medium'>Community-Driven DeFi Platform</div>
@@ -23,7 +23,7 @@ export function TitleSection() {
             </div>
             <div className="flex text-jala-red font-mono space-x-2">
               {/* <div className="font-tight font-medium text-[15px]">Powered By</div> */}
-              <Image width={150} height={50} src="/images/powered-by-chiliz-white.png" alt={""} />
+              <Image width={150} height={50} src="/images/powered-by-chiliz-white.png" alt="powered-by-chiliz-white" />
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@ export function TitleSection() {
             />
           </div>
           <div className=" w-full space-y-7 flex flex-col items-center justify-center font-bold py-[7%] px-[30px]">
-            <Image src={"/images/title.svg"} alt={""} width={2000} height={200} className="w-full z-10" />
+            <Image src={"/images/title.svg"} alt="title" width={2000} height={200} className="w-full z-10" />
             <div className="flex w-full justify-between items-center 2xl:items-end space-x-4">
               <div className="text-jala-red text-center text-[40px] 2xl:text-[72px] 3xl:text-[80px] leader-[96px] font-extrabold">
                 SPORTS MEETS WEB3
@@ -66,7 +66,12 @@ export function TitleSection() {
                 </div>
                 <div className="flex text-jala-red font-mono space-x-2">
                   {/* <div className="font-tight font-medium text-[15px]">Powered By</div> */}
-                  <Image width={150} height={50} src="/images/powered-by-chiliz-white.png" alt={""} />
+                  <Image
+                    width={150}
+                    height={50}
+                    src="/images/powered-by-chiliz-white.png"
+                    alt="powered-by-chiliz-white"
+                  />
                 </div>
               </div>
             </div>

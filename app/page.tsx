@@ -1,4 +1,3 @@
-"use client";
 import AssetSection from "@/components/AssetSection";
 import Footer from "@/components/Footer";
 import GameSection from "@/components/GameSection";
@@ -23,6 +22,7 @@ export const metadata: Metadata = {
 export default function Home() {
   const isMobile = useCheckIsMobile();
   const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     setMounted(true);
   }, []);
