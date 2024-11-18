@@ -46,9 +46,8 @@ export const getDefaultMetadata = (): Metadata => ({
       "max-snippet": -1,
     },
   },
-  // Add structured data for rich results
   verification: {
-    google: "your-google-verification-code", // Add your Google Search Console verification code
+    google: "TamDzN3AE-EJuOQSCjTGkMrNEjBZ3QvVSp6DoTtBRNM",
   },
 });
 

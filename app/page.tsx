@@ -10,6 +10,15 @@ import WhatWeDoSection from "@/components/WhatWeDoSection";
 import { useCheckIsMobile } from "@/hooks/useCheckIsMobile";
 import { StatdiumSection } from "@/components/StatdiumSection";
 import { useEffect, useState } from "react";
+import { Metadata } from "next";
+import { getDefaultMetadata } from "./seo";
+
+export const metadata: Metadata = {
+  ...getDefaultMetadata(),
+  alternates: {
+    canonical: "https://kayen.org",
+  },
+};
 
 export default function Home() {
   const isMobile = useCheckIsMobile();
