@@ -1,10 +1,15 @@
+import {
+  DISCORD_LINK,
+  DOCS_LINK,
+  SWAP_PRODUCT_LINK,
+  X_LINK,
+} from "@/config/links";
 import { useCheckIsMobile } from "@/hooks/useCheckIsMobile";
-import { Logo } from "./ui/Logo";
-import { HeaderTab } from "./ui/HeaderTab";
+import { NavigationItem } from "@/types/menu";
 import Link from "next/link";
 import { useState } from "react";
-import { NavigationItem } from "@/types/menu";
-import { DISCORD_LINK, DOCS_LINK, MEDIUM_LINK, SWAP_PRODUCT_LINK, X_LINK } from "@/config/links";
+import { HeaderTab } from "./ui/HeaderTab";
+import { Logo } from "./ui/Logo";
 
 export function Header() {
   const isMobile = useCheckIsMobile();
@@ -19,6 +24,11 @@ export function Header() {
   };
 
   const navigation: NavigationItem[] = [
+    {
+      name: "PRESALE",
+      href: "https://app.kayen.org/presale",
+      backgrounded: true,
+    },
     {
       name: "DOCS",
       href: DOCS_LINK,
@@ -59,12 +69,20 @@ export function Header() {
             >
               {isHovering ? (
                 <>
-                  <img className="h-4" src="/images/icons/arrow-top-right-red.svg" alt="arrow-top-right-red" />
+                  <img
+                    className="h-4"
+                    src="/images/icons/arrow-top-right-red.svg"
+                    alt="arrow-top-right-red"
+                  />
                   <div>LAUNCH APP</div>
                 </>
               ) : (
                 <>
-                  <img className="h-4" src="/images/icons/arrow-top-right.svg" alt="arrow-top-right" />
+                  <img
+                    className="h-4"
+                    src="/images/icons/arrow-top-right.svg"
+                    alt="arrow-top-right"
+                  />
                   <div>LAUNCH APP</div>
                 </>
               )}
@@ -74,7 +92,10 @@ export function Header() {
               className="px-6  flex items-center justify-center duration-500 
                   border-transparent border-b-2 hover:border-b-2 hover:border-jala-red"
             >
-              <img src="/images/icons/hamburger-icon.svg" alt="hamburger-icon" />
+              <img
+                src="/images/icons/hamburger-icon.svg"
+                alt="hamburger-icon"
+              />
             </div>
           </div>
           {isOpen ? (
@@ -85,7 +106,7 @@ export function Header() {
                     <Link key={index} href={tab.href}>
                       <li className=" p-4 flex justify-between">
                         <div>{tab.name}</div>
-                        <img src={tab.icon} alt={tab.name} />
+                        {!!tab.icon && <img src={tab.icon} alt={tab.name} />}
                       </li>
                     </Link>
                   );
@@ -106,13 +127,32 @@ export function Header() {
         </div>
         */}
           <div className="w-[25%] lg:w-[20%] 2xl:w-[15%] flex justify-center items-center space-x-2 ">
-            <HeaderTab title={"documentation"} imgUrl={"/images/icons/docs-icon.svg"} href={DOCS_LINK} />
+            <HeaderTab
+              title={"presale"}
+              href={"https://app.kayen.org/presale"}
+              backgrounded
+            />
+          </div>
+          <div className="w-[25%] lg:w-[20%] 2xl:w-[15%] flex justify-center items-center space-x-2 ">
+            <HeaderTab
+              title={"documentation"}
+              imgUrl={"/images/icons/docs-icon.svg"}
+              href={DOCS_LINK}
+            />
           </div>
           <div className="w-[20%] lg:w-[15%] 2xl:w-[10%] flex justify-center items-center space-x-2 ">
-            <HeaderTab title={"discord"} imgUrl={"/images/icons/discord-icon.svg"} href={DISCORD_LINK} />
+            <HeaderTab
+              title={"discord"}
+              imgUrl={"/images/icons/discord-icon.svg"}
+              href={DISCORD_LINK}
+            />
           </div>
           <div className="w-[20%] lg:w-[15%] 2xl:w-[10%] flex justify-center items-center space-x-2 ">
-            <HeaderTab title={"twitter"} imgUrl={"/images/icons/x-icon.svg"} href={X_LINK} />
+            <HeaderTab
+              title={"twitter"}
+              imgUrl={"/images/icons/x-icon.svg"}
+              href={X_LINK}
+            />
           </div>
           {/* [Auxili's Request]
         <div className="w-[25%] lg:w-[20%] 2xl:w-[14%] flex justify-center items-center space-x-2 ">
@@ -140,12 +180,20 @@ export function Header() {
             >
               {isHovering ? (
                 <>
-                  <img className="h-4" src="/images/icons/arrow-top-right-red.svg" alt="arrow-top-right-red" />
+                  <img
+                    className="h-4"
+                    src="/images/icons/arrow-top-right-red.svg"
+                    alt="arrow-top-right-red"
+                  />
                   <div>LAUNCH APP</div>
                 </>
               ) : (
                 <>
-                  <img className="h-4" src="/images/icons/arrow-top-right.svg" alt="arrow-top-right" />
+                  <img
+                    className="h-4"
+                    src="/images/icons/arrow-top-right.svg"
+                    alt="arrow-top-right"
+                  />
                   <div>LAUNCH APP</div>
                 </>
               )}
