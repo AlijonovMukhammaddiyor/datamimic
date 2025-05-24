@@ -5,31 +5,33 @@ const BASE_URL = "https://kayen.org";
 export const getDefaultMetadata = (): Metadata => ({
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Kayen | Decentralized Exchange on Chiliz",
-    template: "%s | Kayen",
+    default: "DataMimic | Data Collection for Humanoid Robots",
+    template: "%s | DataMimic",
   },
   description:
-    "Execute transactions of Fan Tokens via a decentralized exchange on Chiliz. Trade, provide liquidity, and participate in the future of sports finance.",
-  keywords: ["Kayen", "DEX", "Chiliz", "Fan Tokens", "Decentralized Exchange", "Sports Finance", "Crypto", "Spicy"],
+    "DataMimic provides turnkey data solutions for humanoid robotics, relieving robot companies and research labs of the time-consuming burden of data collection so your team can focus on AI innovation.",
+  keywords: ["DataMimic", "Data Collection", "Humanoid Robotics", "Robot Companies", "Research Labs", "AI Innovation"],
   openGraph: {
     type: "website",
-    title: "Kayen Protocol",
-    description: "Execute transactions of Fan Tokens via a decentralized exchange on Chiliz.",
+    title: "DataMimic | Data Collection for Humanoid Robots",
+    description:
+      "DataMimic provides turnkey data solutions for humanoid robotics, relieving robot companies and research labs of the time-consuming burden of data collection so your team can focus on AI innovation.",
     url: BASE_URL,
-    siteName: "Kayen",
+    siteName: "DataMimic",
     images: [
       {
         url: `${BASE_URL}/images/OG.png`,
         width: 1200,
         height: 675,
-        alt: "Kayen Protocol",
+        alt: "DataMimic",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kayen Protocol",
-    description: "Execute transactions of Fan Tokens via a decentralized exchange on Chiliz.",
+    title: "DataMimic | Data Collection for Humanoid Robots",
+    description:
+      "DataMimic provides turnkey data solutions for humanoid robotics, relieving robot companies and research labs of the time-consuming burden of data collection so your team can focus on AI innovation.",
     images: [`${BASE_URL}/images/OG.png`],
   },
   alternates: {
@@ -57,31 +59,31 @@ export const getSectionMetadata = (section: string): Metadata => {
 
   const sectionConfigs: Record<string, Metadata> = {
     trade: {
-      title: "Trade | Kayen Protocol",
-      description: "Swap or provide liquidity for Fan Tokens on the Kayen Protocol.",
+      title: "Trade | DataMimic",
+      description: "Swap or provide liquidity for Fan Tokens on the DataMimic.",
       alternates: {
-        canonical: "https://app.kayen.org/trade",
+        canonical: "https://app.datamimic.ai/trade",
       },
     },
     pools: {
-      title: "Pools | Kayen Protocol",
-      description: "Provide liquidity and earn rewards on the Kayen Protocol",
+      title: "Pools | DataMimic",
+      description: "Provide liquidity and earn rewards on the DataMimic",
       alternates: {
-        canonical: "https://app.kayen.org",
+        canonical: "https://app.datamimic.ai",
       },
     },
     offside: {
-      title: "Offside | Kayen Protocol",
-      description: "Explore Kayen's Offside feature for advanced trading.",
+      title: "Offside | DataMimic",
+      description: "Explore DataMimic's Offside feature for advanced trading.",
       alternates: {
-        canonical: "https://app.kayen.org/offside",
+        canonical: "https://app.datamimic.ai/offside",
       },
     },
     league: {
-      title: "League | Kayen Protocol",
-      description: "Join Kayen's League for enhanced trading opportunities.",
+      title: "League | DataMimic",
+      description: "Join DataMimic's League for enhanced trading opportunities.",
       alternates: {
-        canonical: "https://app.kayen.org/league",
+        canonical: "https://app.datamimic.ai/league",
       },
     },
   };

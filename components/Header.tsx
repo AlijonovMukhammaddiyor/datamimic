@@ -1,9 +1,4 @@
-import {
-  DISCORD_LINK,
-  DOCS_LINK,
-  SWAP_PRODUCT_LINK,
-  X_LINK,
-} from "@/config/links";
+import { DISCORD_LINK, DOCS_LINK, SWAP_PRODUCT_LINK, X_LINK } from "@/config/links";
 import { useCheckIsMobile } from "@/hooks/useCheckIsMobile";
 import { NavigationItem } from "@/types/menu";
 import Link from "next/link";
@@ -63,27 +58,19 @@ export function Header() {
             <Link
               className="px-10 border-t border-x space-x-2  duration-500 border-[#272A2A] flex items-center justify-center
                  hover:bg-white hover:text-jala-red"
-              href={SWAP_PRODUCT_LINK}
+              href={"https://sanjar-techie.github.io/"}
               onMouseEnter={onMouseEnterLaunch}
               onMouseLeave={onMouseLeaveLaunch}
             >
               {isHovering ? (
                 <>
-                  <img
-                    className="h-4"
-                    src="/images/icons/arrow-top-right-red.svg"
-                    alt="arrow-top-right-red"
-                  />
-                  <div>LAUNCH APP</div>
+                  <img className="h-4" src="/images/icons/arrow-top-right-red.svg" alt="arrow-top-right-red" />
+                  <div>LEARN MORE</div>
                 </>
               ) : (
                 <>
-                  <img
-                    className="h-4"
-                    src="/images/icons/arrow-top-right.svg"
-                    alt="arrow-top-right"
-                  />
-                  <div>LAUNCH APP</div>
+                  <img className="h-4" src="/images/icons/arrow-top-right.svg" alt="arrow-top-right" />
+                  <div>LEARN MORE</div>
                 </>
               )}
             </Link>
@@ -92,13 +79,10 @@ export function Header() {
               className="px-6  flex items-center justify-center duration-500 
                   border-transparent border-b-2 hover:border-b-2 hover:border-jala-red"
             >
-              <img
-                src="/images/icons/hamburger-icon.svg"
-                alt="hamburger-icon"
-              />
+              <img src="/images/icons/hamburger-icon.svg" alt="hamburger-icon" />
             </div>
           </div>
-          {isOpen ? (
+          {/* {isOpen ? (
             <div className="absolute bg-bg-main right-0 top-[60px] min-h-screen w-full rounded-l-lg z-40">
               <ul className="text-white h-screen w-full justify-start items-center">
                 {navigation.map((tab, index) => {
@@ -115,7 +99,7 @@ export function Header() {
             </div>
           ) : (
             <></>
-          )}
+          )} */}
         </div>
       ) : (
         <div className="flex justify-between md:h-[60px] xl:h-[72px] text-[20px]  text-[#D3D3D3] leading-[28px]  font-medium  uppercase">
@@ -126,7 +110,7 @@ export function Header() {
           <div>Governance</div>
         </div>
         */}
-          <div className="w-[25%] lg:w-[20%] 2xl:w-[15%] flex justify-center items-center space-x-2 ">
+          {/* <div className="w-[25%] lg:w-[20%] 2xl:w-[15%] flex justify-center items-center space-x-2 ">
             <HeaderTab
               title={"presale"}
               href={"https://app.kayen.org/presale"}
@@ -153,23 +137,13 @@ export function Header() {
               imgUrl={"/images/icons/x-icon.svg"}
               href={X_LINK}
             />
-          </div>
-          {/* [Auxili's Request]
-        <div className="w-[25%] lg:w-[20%] 2xl:w-[14%] flex justify-center items-center space-x-2 ">
-          <HeaderTab title={"leaderboard"} imgUrl={"/images/icons/point-icon.svg"} href={""}/>
-        </div>
-        */}
+          </div> */}
           <div className="w-[25%] lg:w-[30%] 2xl:w-[40%] flex justify-center items-center space-x-2" />
-          {/* [Auxili's Request]
-        <div className="w-[18%] flex justify-center items-center space-x-2">
-          <img className="h-4 xl:h-4" src="/images/icons/community-icon.svg"/>        
-          <div>community</div>
-        </div>
-        <div className="flex items-center w-[17%]"/>
-        */}
-          <Link
+          <a
             className="flex font-medium text-[16px] lg:text-[20px] leading-[28px] tracking-widest w-[179px]"
-            href={SWAP_PRODUCT_LINK}
+            href={"https://datamimic.github.io"}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <div
               className="w-full space-x-2 flex items-center justify-center
@@ -180,25 +154,17 @@ export function Header() {
             >
               {isHovering ? (
                 <>
-                  <img
-                    className="h-4"
-                    src="/images/icons/arrow-top-right-red.svg"
-                    alt="arrow-top-right-red"
-                  />
-                  <div>LAUNCH APP</div>
+                  <img className="h-4" src="/images/icons/arrow-top-right-red.svg" alt="arrow-top-right-red" />
+                  <div>LEARN MORE</div>
                 </>
               ) : (
                 <>
-                  <img
-                    className="h-4"
-                    src="/images/icons/arrow-top-right.svg"
-                    alt="arrow-top-right"
-                  />
-                  <div>LAUNCH APP</div>
+                  <img className="h-4" src="/images/icons/arrow-top-right.svg" alt="arrow-top-right" />
+                  <div>LEARN MORE</div>
                 </>
               )}
             </div>
-          </Link>
+          </a>
         </div>
       )}
     </>

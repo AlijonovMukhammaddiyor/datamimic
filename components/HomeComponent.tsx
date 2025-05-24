@@ -33,10 +33,10 @@ export function HomeComponent() {
       <div className="relative z-10 space-y-16 ">
         <TitleSection />
         <StatdiumSection />
-        <WhatWeDoSection />
+        {/* <WhatWeDoSection /> */}
         <TokenSection />
         <AssetSection />
-        <PartnerSection />
+        {/* <PartnerSection /> */}
       </div>
       <div className="z-10 w-full  border-y  border-[#272A2A]">
         <GameSection />
@@ -73,13 +73,13 @@ export function HomeComponent() {
         {/* secure section */}
         <AssetSection />
         {/* partners section */}
-        <PartnerSection />
+        {/* <PartnerSection /> */}
         {/* news&update section */}
         {/* [Auxili's Request] <NewsSection/>*/}
         {/* game section */}
-        <GameSection />
+        {/* <GameSection /> */}
         {/* footer section */}
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

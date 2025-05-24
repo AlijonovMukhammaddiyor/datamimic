@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,900");
+
+.container {
+  /* background: #1f2024; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.blob_c {
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  filter: blur(40px);
+}
+
+.shape_blob {
+  background: #104f6f;
+  height: 60px;
+  width: 80px;
+  border-radius: 40% 50% 30% 40%;
+  animation: transform 10s ease-in-out infinite both alternate, movement_one 6s ease-in-out infinite both;
+  opacity: 0.5;
+  position: absolute;
+  left: 85%;
+  top: 60%;
+}
+
+.shape_blob_one {
+  background: #003366;
+  height: 150px;
+  width: 200px;
+  left: 80px;
+  top: 150px;
+  transform: rotate(-180deg);
+  animation: transform 5s ease-in-out infinite both alternate, movement_two 5s ease-in-out infinite both;
+}
+
+.shape_blob_six {
+  background: #054c6a;
+  height: 70px;
+  width: 100px;
+  left: 160px;
+  top: 300px;
+  transform: rotate(-180deg);
+  animation: transform 4s ease-in-out infinite both alternate, movement_two 4s ease-in-out infinite both;
+}
+
+.shape_blob_four {
+  background: #1e4e7a;
+  height: 100px;
+  width: 80px;
+  left: 350px;
+  top: 120px;
+  transform: rotate(-180deg);
+  animation: transform 5s ease-in-out infinite both alternate, movement_two 5s ease-in-out infinite both;
+}
+
+.shape_blob_five {
+  background: #003366;
+  height: 100px;
+  width: 80px;
+  left: 480px;
+  top: 100px;
+  transform: rotate(-180deg);
+  animation: transform 10s ease-in-out infinite both alternate, movement_two 15s ease-in-out infinite both;
+}
+
+.shape_blob_two {
+  background: #1e4e7a;
+  height: 150px;
+  width: 150px;
+  left: 600px;
+  top: 250px;
+  transform: rotate(-180deg);
+  animation: transform 8s ease-in-out infinite both alternate, movement_two 8s ease-in-out infinite both;
+}
+
+.shape_blob_three {
+  background: #054c6a;
+  height: 150px;
+  width: 150px;
+  left: 800px;
+  top: 100px;
+  transform: rotate(-180deg);
+  animation: transform 6s ease-in-out infinite both alternate, movement_two 19s ease-in-out infinite both;
+}
+
+@keyframes transform {
+  0%,
+  100% {
+    border-radius: 33% 67% 70% 30% / 30% 40% 70% 70%;
+  }
+  20% {
+    border-radius: 37% 63% 51% 49% / 37% 35% 35% 63%;
+  }
+  40% {
+    border-radius: 36% 64% 64% 36% / 64% 48% 52% 26%;
+  }
+  60% {
+    border-radius: 37% 63% 51% 49% / 30% 30% 70% 73%;
+  }
+  80% {
+    border-radius: 40% 60% 42% 58% / 51% 51% 49% 59%;
+  }
+}
+
+@keyframes movement_one {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: translate(70%, 30%) rotateY(15deg) scale(1.2);
+  }
+}
+
+@keyframes movement_two {
+  0%,
+  500% {
+    transform: none;
+  }
+  50% {
+    transform: translate(60%, 40%) rotate(-220deg) scale(1.5);
+  }
+}
+
+/* Removed h1 styles as they are likely handled by Tailwind or component-specific styles */

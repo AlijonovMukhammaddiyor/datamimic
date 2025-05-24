@@ -1,40 +1,39 @@
 import { useCheckIsMobile } from "@/hooks/useCheckIsMobile";
-import AssetCard from "@/components/ui/AssetCard";
-import Marquee from "react-fast-marquee";
+// import AssetCard from "@/components/ui/AssetCard"; // Old card, no longer needed
+// import Marquee from "react-fast-marquee"; // Marquee no longer needed
+import VideoAssetCard from "@/components/ui/VideoAssetCard"; // New card
 
-interface AssetProp {
+interface VideoAssetProp {
   title: string;
-  subtitle: string;
-  logo: string;
+  description: string;
+  youtubeVideoId: string;
 }
-const assetProps: AssetProp[] = [
+
+const videoAssetProps: VideoAssetProp[] = [
   {
-    title: "Chiliz",
-    subtitle: "Sports Blockchain",
-    logo: "/images/chiliz-logo.svg",
+    title: "Walking Policy Tested on Real Hardware",
+    description:
+      "This demo shows our end-to-end pipeline in action: human operators in MoCap suits collect diverse locomotion trajectories, which we retarget to the robot's kinematic model. We then train a sim-to-real walking policy on that dataset and deploy it directly to hardware—achieving dynamic, stable humanoid gait.",
+    youtubeVideoId: "9qvbCUorK34", // <<< REPLACE THIS WITH ACTUAL YOUTUBE VIDEO ID
   },
   {
-    title: "Socios",
-    subtitle: "Chiliz Engagement Platform",
-    logo: "/images/socio-logo.svg",
+    title: "Simulation Pipeline: Training Policies from Our Dataset",
+    description:
+      "In our high-fidelity simulator, we initialize the humanoid with retargeted motion and teleop trajectories from our dataset, then train and validate robust control policies before real-world deployment. This pipeline helps humanoid companies validate their dataset fast in simulation.",
+    youtubeVideoId: "D3dI63GXNTk", // <<< REPLACE THIS WITH ACTUAL YOUTUBE VIDEO ID
   },
-  /* [Request] {
-      title : 'Bitget',
-      subtitle : 'Non-Custodial Wallet',
-      logo : '/images/bitget-logo.svg',
-  },
-*/
   {
-    title: "Coin98",
-    subtitle: "Non-Custodial Wallet",
-    logo: "/images/coin98-logo.svg",
+    title: "Our MoCap Setup",
+    description:
+      "Our MoCap studio captures precise full-body human motions using high-fidelity sensors. We then automatically retarget those recordings to the robot's kinematic model, creating realistic training data for robust policy development.",
+    youtubeVideoId: "vIc5sNNMnd4", // <<< REPLACE THIS WITH ACTUAL YOUTUBE VIDEO ID
   },
-  /*  [Request] {
-      title : 'Community Treasury',
-      subtitle : 'Crypto insturance',
-      logo : '/images/icons/openzeppelin-icon.png',
+  {
+    title: "Fine manipulation tasks",
+    description:
+      "This demo highlights dexterous manipulation learned from our teleoperation dataset. Operators use VR headsets and haptic sensor gloves to capture precise finger trajectories, force profiles, and tactile feedback, which we use to train and validate fine manipulation models.",
+    youtubeVideoId: "5iIs3b9yFvs", // <<< REPLACE THIS WITH ACTUAL YOUTUBE VIDEO ID
   },
-*/
 ];
 
 export default function AssetSection() {
@@ -42,51 +41,42 @@ export default function AssetSection() {
 
   return (
     <div className="w-full 2xl:py-10">
-      <section>
+      <section className="container mx-auto px-4 py-12 md:py-16">
         {isMobile ? (
           <>
-            <div className="px-[5%] space-y-4 py-16">
+            <div className="text-center mb-10">
               <div className="uppercase text-[48px] leading-[56px] font-medium text-start">
                 <span className="text-white">Our </span>
-                <span className="text-[#FF1D00] ">Collaboration</span>
+                <span className="text-[#FF1D00] ">Showcase</span> {/* Updated mobile title */}
               </div>
-              {/* [Request]
-          <div className='uppercase text-[48px] leading-[56px] font-medium text-start text-white '>Your assets,<br/><span className='text-jala-red'>secured.</span></div>
-          <div className='w-[340px] text-lg font-tight font-light text-white'>Audited by the world’s leading security firms, security of Jalaswap is the highest priority.</div>
-          */}
             </div>
-            <div className="flex justify-center px-[10%]">
-              <div className="font-tight md:w-[760px] sm:w-[600px] w-[300px] min-[350px]:w-[300px] min-[450px]:w-[380px] min-[550px]:w-[500px]">
-                <Marquee pauseOnHover>
-                  {assetProps.map((asset, index) => (
-                    <AssetCard key={index} logo={asset.logo} title={asset.title} subtitle={asset.subtitle} />
-                  ))}
-                </Marquee>
-              </div>
+            <div className="flex flex-col space-y-8">
+              {videoAssetProps.map((asset, index) => (
+                <VideoAssetCard
+                  key={index}
+                  title={asset.title}
+                  description={asset.description}
+                  youtubeVideoId={asset.youtubeVideoId}
+                />
+              ))}
             </div>
           </>
         ) : (
           <>
-            <div className="w-full px-[20px] space-y-20">
-              <div className="flex justify-between items-center">
-                <div className="uppercase text-[80px] leading-[88px] text-start ">
-                  <span className="text-white">Our </span>
-                  <span className="text-[#FF1D00] ">Collaboration</span>
-                </div>
-                <img src="/images/icons/background-icon2.svg" alt="background-icon" />
-              </div>
-              {/* [Request]
-          <div className='w-[50%] md:py-10 2xl:py-20 space-y-3'>
-            <div className='uppercase text-[80px] leading-[88px] font-semibold text-start text-white '>Your assets,<br/><span className='text-jala-red'>secured.</span></div>
-              <div className=''>
-              <div className='w-[400px] font-sans text-[20px] font-light text-jala-gray-1'>Audited by the world’s leading security firms, security of Jalaswap is the highest priority.</div>
+            <div className="text-center mb-16">
+              <h2 className="uppercase text-white text-5xl md:text-6xl lg:text-7xl xl:text-[80px] leading-tight tracking-wide font-semibold">
+                You accelerate <span className="text-jala-red">AI</span>. We handle the{" "}
+                <span className="text-jala-red">data</span>
+              </h2>
             </div>
-          </div>
-          */}
-            </div>
-            <div className="flex font-tight overflow-x-hidden">
-              {assetProps.map((asset, index) => (
-                <AssetCard key={index} logo={asset.logo} title={asset.title} subtitle={asset.subtitle} />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+              {videoAssetProps.map((asset, index) => (
+                <VideoAssetCard
+                  key={index}
+                  title={asset.title}
+                  description={asset.description}
+                  youtubeVideoId={asset.youtubeVideoId}
+                />
               ))}
             </div>
           </>
