@@ -39,27 +39,31 @@ const videoAssetProps: VideoAssetProp[] = [
 export default function AssetSection() {
   const isMobile = useCheckIsMobile();
 
+  const cardGridContent = (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+      {videoAssetProps.map((asset, index) => (
+        <VideoAssetCard
+          key={index}
+          title={asset.title}
+          description={asset.description}
+          youtubeVideoId={asset.youtubeVideoId}
+        />
+      ))}
+    </div>
+  );
+
   return (
     <div className="w-full 2xl:py-10">
       <section className="container mx-auto px-4 py-12 md:py-16">
         {isMobile ? (
           <>
             <div className="text-center mb-10">
-              <div className="uppercase text-[48px] leading-[56px] font-medium text-start">
-                <span className="text-white">Our </span>
-                <span className="text-[#FF1D00] ">Showcase</span> {/* Updated mobile title */}
-              </div>
+              <h2 className="uppercase text-white text-5xl md:text-6xl lg:text-7xl xl:text-[80px] leading-tight tracking-wide font-semibold">
+                You accelerate <span className="text-jala-red">AI</span>. We handle the{" "}
+                <span className="text-jala-red">data</span>
+              </h2>
             </div>
-            <div className="flex flex-col space-y-8">
-              {videoAssetProps.map((asset, index) => (
-                <VideoAssetCard
-                  key={index}
-                  title={asset.title}
-                  description={asset.description}
-                  youtubeVideoId={asset.youtubeVideoId}
-                />
-              ))}
-            </div>
+            {cardGridContent}
           </>
         ) : (
           <>
@@ -69,16 +73,7 @@ export default function AssetSection() {
                 <span className="text-jala-red">data</span>
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-              {videoAssetProps.map((asset, index) => (
-                <VideoAssetCard
-                  key={index}
-                  title={asset.title}
-                  description={asset.description}
-                  youtubeVideoId={asset.youtubeVideoId}
-                />
-              ))}
-            </div>
+            {cardGridContent}
           </>
         )}
       </section>

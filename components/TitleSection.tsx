@@ -24,34 +24,32 @@ export function TitleSection() {
 
       <div className="relative z-10">
         {isMobile ? (
-          <div className="w-full space-y-5 flex flex-col items-center justify-center font-bold pt-32 px-[5%]">
+          <div className="w-full space-y-5 flex flex-col items-center justify-center font-bold pt-[70px] px-[5%]">
             {/* <img src={'/images/title.svg'} alt="title" className=" w-full" /> */}
-            <div className="text-center text-5xl sm:text-6xl font-extrabold font-main text-white py-4 w-full">
-              Get training data for
+            <div className="text-center text-5xl lg:text-5xl xl:text-6xl font-main font-extrabold text-white pt-16 w-full z-10">
+              GET TRAINING DATA FOR
               <br />
-              Humanoid Robots
+              <span className="text-jala-red">HUMANOID ROBOTS</span>
             </div>
-            <div className="text-center text-5xl font-medium text-jala-red">SPORTS MEETS WEB3</div>
-            {/* [Request]
-            <div className='text-center text-5xl font-medium'>Community-Driven DeFi Platform</div>
-            */}
-            <div className="space-y-5 py-6 flex flex-col items-center">
-              <div className="flex w-[300px] sm:w-[330px] text-[#D3D3D3] text-center text-lg sm:text-xl font-tight font-light leading-[26px]">
-                Community-Driven & All-In-One Sports DeFi Ecosystem
-                {/* Community-Driven, DeFi Ecosystem */}
-                {/* [Request]
-                  The first DEX on Chiliz to swap, wrap, provide liquidity and stake fan tokens.
-                */}
-              </div>
-              <div className="flex text-jala-red font-mono space-x-2">
-                {/* <div className="font-tight font-medium text-[15px]">Powered By</div> */}
-                <Image
-                  width={150}
-                  height={50}
-                  src="/images/powered-by-chiliz-white.png"
-                  alt="powered-by-chiliz-white"
+            <div className="text-center text-base max-w-[600px] font-tight text-[#D3D3D3] tracking-wide ">
+              We build the foundational data infrastructure for the next generation of humanoid robots
+            </div>
+            <div className="flex flex-col z-10 justify-center mt-8">
+              <a
+                className="flex group items-center justify-center border  px-4 py-2 hover:text-jala-red hover:border-jala-red font-medium text-[16px] lg:text-[20px] leading-[28px] tracking-widest w-[179px]"
+                href={"https://sanjar-techie.github.io/"}
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+              >
+                <div>REQUEST DATA</div>
+                <img
+                  className={`h-4 ${isHovering ? "translate-x-2 text-jala-red" : ""} transition-transform duration-300`}
+                  src={isHovering ? "/images/icons/arrow-top-right-red.svg" : "/images/icons/arrow-top-right.svg"}
+                  alt="arrow-top-right"
                 />
-              </div>
+              </a>
             </div>
           </div>
         ) : (

@@ -56,7 +56,7 @@ export function Header() {
           <Logo />
           <div className="flex">
             <Link
-              className="px-10 border-t border-x space-x-2  duration-500 border-[#272A2A] flex items-center justify-center
+              className="pl-10 pr-5 duration-500 border-[#272A2A] flex items-center justify-center
                  hover:bg-white hover:text-jala-red"
               href={"https://sanjar-techie.github.io/"}
               onMouseEnter={onMouseEnterLaunch}
@@ -64,42 +64,17 @@ export function Header() {
             >
               {isHovering ? (
                 <>
+                  <div className="tracking-wide">LEARN MORE</div>
                   <img className="h-4" src="/images/icons/arrow-top-right-red.svg" alt="arrow-top-right-red" />
-                  <div>LEARN MORE</div>
                 </>
               ) : (
                 <>
+                  <div className="tracking-wide">LEARN MORE</div>
                   <img className="h-4" src="/images/icons/arrow-top-right.svg" alt="arrow-top-right" />
-                  <div>LEARN MORE</div>
                 </>
               )}
             </Link>
-            <div
-              onClick={toggleMenu}
-              className="px-6  flex items-center justify-center duration-500 
-                  border-transparent border-b-2 hover:border-b-2 hover:border-jala-red"
-            >
-              <img src="/images/icons/hamburger-icon.svg" alt="hamburger-icon" />
-            </div>
           </div>
-          {/* {isOpen ? (
-            <div className="absolute bg-bg-main right-0 top-[60px] min-h-screen w-full rounded-l-lg z-40">
-              <ul className="text-white h-screen w-full justify-start items-center">
-                {navigation.map((tab, index) => {
-                  return (
-                    <Link key={index} href={tab.href}>
-                      <li className=" p-4 flex justify-between">
-                        <div>{tab.name}</div>
-                        {!!tab.icon && <img src={tab.icon} alt={tab.name} />}
-                      </li>
-                    </Link>
-                  );
-                })}
-              </ul>
-            </div>
-          ) : (
-            <></>
-          )} */}
         </div>
       ) : (
         <div className="flex justify-between md:h-[60px] xl:h-[72px] text-[20px]  text-[#D3D3D3] leading-[28px]  font-medium  uppercase">

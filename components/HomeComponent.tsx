@@ -38,12 +38,12 @@ export function HomeComponent() {
         <AssetSection />
         {/* <PartnerSection /> */}
       </div>
-      <div className="z-10 w-full  border-y  border-[#272A2A]">
+      {/* <div className="z-10 w-full  border-y  border-[#272A2A]">
         <GameSection />
       </div>
       <div className="z-10 w-full">
         <Footer />
-      </div>
+      </div> */}
     </>
   ) : (
     <>

@@ -49,7 +49,7 @@ export function StatdiumSection() {
       initial="hidden"
       variants={container}
       animate={control}
-      className="flex justify-center h-[300px] md:h-[400px] 2xl:h-[500px]"
+      className="flex justify-center h-[200px] md:h-[400px] 2xl:h-[500px]"
     >
       {stadiums.map((url, index) => (
         <motion.li key={index} variants={item} className="absolute" animate={{ y: `${index * 15}px` }}>
