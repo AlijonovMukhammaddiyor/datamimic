@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         "bg-main": "#0F1212",
-        "jala-red": "#FF1D00",
+        "jala-red": "#f63e02",
         "jala-white": "#FFFFFF",
         "jala-gray-1": "#D3D3D3",
       },

@@ -55,7 +55,7 @@ export function StatdiumSection() {
         <motion.li key={index} variants={item} className="absolute" animate={{ y: `${index * 15}px` }}>
           <img
             src={url}
-            className="w-[300px]  min-[450px]:w-[400px] min-[550px]:w-[500px] sm:w-[600px] md:w-[850px] xl:w-[1200px] 3xl:w-[1360px]"
+            className="w-[300px] min-[450px]:w-[400px] min-[550px]:w-[500px] sm:w-[600px] md:w-[850px] xl:w-[1200px] 3xl:w-[1360px]"
             alt="img"
           />
         </motion.li>

@@ -25,7 +25,7 @@
 }
 
 .shape_blob {
-  background: #104f6f;
+  background: #5f0f40;
   height: 60px;
   width: 80px;
   border-radius: 40% 50% 30% 40%;
@@ -37,7 +37,7 @@
 }
 
 .shape_blob_one {
-  background: #003366;
+  background: #5f0f40;
   height: 150px;
   width: 200px;
   left: 80px;
@@ -47,7 +47,7 @@
 }
 
 .shape_blob_six {
-  background: #054c6a;
+  background: #5f0f40;
   height: 70px;
   width: 100px;
   left: 160px;
@@ -57,7 +57,7 @@
 }
 
 .shape_blob_four {
-  background: #1e4e7a;
+  background: #5f0f40;
   height: 100px;
   width: 80px;
   left: 350px;
@@ -67,7 +67,7 @@
 }
 
 .shape_blob_five {
-  background: #003366;
+  background: #5f0f40;
   height: 100px;
   width: 80px;
   left: 480px;
@@ -77,7 +77,7 @@
 }
 
 .shape_blob_two {
-  background: #1e4e7a;
+  background: #5f0f40;
   height: 150px;
   width: 150px;
   left: 600px;
@@ -87,7 +87,7 @@
 }
 
 .shape_blob_three {
-  background: #054c6a;
+  background: #5f0f40;
   height: 150px;
   width: 150px;
   left: 800px;

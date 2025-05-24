@@ -18,21 +18,12 @@ export const getDefaultMetadata = (): Metadata => ({
       "DataMimic provides turnkey data solutions for humanoid robotics, relieving robot companies and research labs of the time-consuming burden of data collection so your team can focus on AI innovation.",
     url: BASE_URL,
     siteName: "DataMimic",
-    images: [
-      {
-        url: `${BASE_URL}/images/OG.png`,
-        width: 1200,
-        height: 675,
-        alt: "DataMimic",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "DataMimic | Data Collection for Humanoid Robots",
     description:
       "DataMimic provides turnkey data solutions for humanoid robotics, relieving robot companies and research labs of the time-consuming burden of data collection so your team can focus on AI innovation.",
-    images: [`${BASE_URL}/images/OG.png`],
   },
   alternates: {
     canonical: BASE_URL,
