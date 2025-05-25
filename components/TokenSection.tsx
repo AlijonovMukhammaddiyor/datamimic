@@ -9,7 +9,7 @@ export default function TokenSection() {
 
   const commonContent = (
     <div className="py-8 md:py-10 w-full flex flex-col justify-center items-center px-4">
-      <div className="uppercase text-lg tracking-wide sm:text-4xl md:text-[42px] 2xl:text-[56px] leading-snug md:leading-[50px] text-center text-white max-w-xs sm:max-w-md md:max-w-2xl 2xl:max-w-3xl">
+      <div className="uppercase text-lg tracking-wide sm:text-4xl md:text-[42px] 2xl:text-[56px] leading-snug md:leading-[60px] text-center text-white max-w-xs sm:max-w-md md:max-w-2xl 2xl:max-w-3xl">
         Building in-house data pipelines is <span className="text-jala-red">slow</span>,{" "}
         <span className="text-jala-red">costly</span>, and and <span className="text-jala-red">can't scale</span> to
         provide the diverse motion data needed for training gen-purpose robot policies.
