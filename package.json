@@ -16,13 +16,16 @@
     "react-fast-marquee": "^1.6.4",
     "react-intersection-observer": "^9.8.2",
     "react-responsive": "^10.0.0",
+    "three": "^0.176.0",
     "ts-node": "^10.9.2",
-    "typescript": "5.3.2"
+    "typescript": "5.3.2",
+    "vanta": "^0.5.24"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/three": "^0.176.0",
     "autoprefixer": "^10",
     "eslint": "^8",
     "eslint-config-next": "13.5.6",

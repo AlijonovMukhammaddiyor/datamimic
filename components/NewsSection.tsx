@@ -5,11 +5,9 @@ export default function NewsSection() {
   return (
     <>
       {isMobile ? (
-        <div className="w-full space-y-16">
+        <div className="w-full space-y-16 px-[5%]">
           <div className="">
-            <div className="uppercase text-[48px] leading-[56px] font-medium text-start text-[#FF1D00] ">
-              News&Updates
-            </div>
+            <div className="uppercase text-4xl font-medium text-start text-[#FF1D00]">News&Updates</div>
             <div className="space-y-3">
               <div className="text-lg font-sans font-light">Global coverage for Jalaswap & Chiliz token</div>
             </div>
@@ -19,7 +17,7 @@ export default function NewsSection() {
               <img className="h-4 w-4" src="/images/icons/icon.png" alt="icon" />
               <div>22 FEB 2024</div>
             </div>
-            <div className="text-[#7E7E7E] text-2xl pr-10">
+            <div className="text-[#7E7E7E] text-2xl pr-4">
               Jalaswap, a decentralized exchange, raises $23 million to develop sports token swaps
             </div>
             <div className="col-span-1">
@@ -31,7 +29,7 @@ export default function NewsSection() {
               <img className="h-4 w-4" src="/images/icons/icon.png" alt="icon" />
               <div>22 FEB 2024</div>
             </div>
-            <div className="text-[#7E7E7E] text-2xl pr-10">
+            <div className="text-[#7E7E7E] text-2xl pr-4">
               Jalaswap, a decentralized exchange, raises $23 million to develop sports token swaps
             </div>
             <div className="col-span-1">
@@ -43,7 +41,7 @@ export default function NewsSection() {
               <img className="h-4 w-4" src="/images/icons/icon.png" alt="icon" />
               <div>22 FEB 2024</div>
             </div>
-            <div className="text-[#7E7E7E] text-2xl pr-10">
+            <div className="text-[#7E7E7E] text-2xl pr-4">
               Jalaswap, a decentralized exchange, raises $23 million to develop sports token swaps
             </div>
             <div className="col-span-1">

@@ -15,7 +15,7 @@ export default function GameSection() {
               numbers={["01", "02", "03", "04", "05", "06"]}
               mobileNumbers={["01", "02", "03", "04"]}
             />
-            <div className="relative text-[80px] leading-[88px] font-medium text-start pb-[14%]">
+            <div className="relative text-5xl font-medium text-start pb-10 pt-6">
               <span className="text-[#FF1D00]">KAYEN:</span>
               <br />A NEW GAME.
             </div>

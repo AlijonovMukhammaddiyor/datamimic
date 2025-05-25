@@ -53,12 +53,12 @@ export default function AssetSection() {
   );
 
   return (
-    <div className="w-full 2xl:py-10">
+    <div className="w-full 2xl:py-10 mt-10">
       <section className="container mx-auto px-4 py-12 md:py-16">
         {isMobile ? (
           <>
             <div className="text-center mb-10">
-              <h2 className="uppercase text-white text-5xl md:text-6xl lg:text-7xl xl:text-[80px] leading-tight tracking-wide font-semibold">
+              <h2 className="uppercase text-white text-3xl md:text-4xl leading-tight tracking-wide font-semibold">
                 You accelerate <span className="text-jala-red">AI</span>. We handle the{" "}
                 <span className="text-jala-red">data</span>
               </h2>
@@ -68,7 +68,7 @@ export default function AssetSection() {
         ) : (
           <>
             <div className="text-center mb-16">
-              <h2 className="uppercase text-white text-5xl md:text-6xl lg:text-7xl xl:text-[80px] leading-tight tracking-wide font-semibold">
+              <h2 className="uppercase text-white text-3xl md:text-4xl leading-tight tracking-wide font-semibold">
                 You accelerate <span className="text-jala-red">AI</span>. We handle the{" "}
                 <span className="text-jala-red">data</span>
               </h2>

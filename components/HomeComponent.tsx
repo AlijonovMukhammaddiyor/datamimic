@@ -10,6 +10,7 @@ import TokenSection from "@/components/TokenSection";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
 import { useCheckIsMobile } from "@/hooks/useCheckIsMobile";
 import { StatdiumSection } from "@/components/StatdiumSection";
+import WireframeBackground from "@/components/WireframeBackground";
 import { useEffect, useState } from "react";
 
 export function HomeComponent() {
@@ -25,14 +26,15 @@ export function HomeComponent() {
   }
   return isMobile ? (
     <>
+      <WireframeBackground />
       <div className="flex justify-center w-full h-[60px]">
-        <div className="fixed z-40 bg-bg-main  w-full">
+        <div className="fixed z-40 bg-black/30 backdrop-blur-md w-full">
           <Header />
         </div>
       </div>
       <div className="relative z-10 space-y-16 ">
         <TitleSection />
-        <StatdiumSection />
+        {/* <StatdiumSection /> */}
         {/* <WhatWeDoSection /> */}
         <TokenSection />
         <AssetSection />
@@ -47,14 +49,15 @@ export function HomeComponent() {
     </>
   ) : (
     <>
+      <WireframeBackground />
       <div
         className="flex justify-center w-full
                     md:h-[60px] xl:h-[72px]"
       >
         <div
-          className="fixed z-40 bg-bg-main
+          className="fixed z-40 top-10 overflow-hidden bg-black/30 backdrop-blur-md
                       2xl:w-[1440px] xl:w-[1280px] lg:w-[1024px] 
-                      h-[60px] xl:h-[73px] border-b border-[#272A2A] "
+                      h-[60px] xl:h-[73px]"
         >
           <Header />
         </div>
@@ -63,7 +66,7 @@ export function HomeComponent() {
       <div className="z-10 px-6">
         <TitleSection />
         {/* cylinder section */}
-        <StatdiumSection />
+        {/* <StatdiumSection /> */}
         {/* whatwedo section */}
         {/* <WhatWeDoSection/> */}
       </div>

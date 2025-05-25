@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config: Config = {
   content: [
@@ -10,12 +11,12 @@ const config: Config = {
     extend: {
       colors: {
         "bg-main": "#0F1212",
-        "jala-red": "#f63e02",
+        "jala-red": "#ff595e",
         "jala-white": "#FFFFFF",
         "jala-gray-1": "#D3D3D3",
       },
       fontFamily: {
-        tight: ["InterTight"],
+        sans: ["Inter", ...fontFamily.sans],
       },
       screens: {
         "3xl": "1728px",

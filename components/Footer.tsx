@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <>
       {isMobile ? (
-        <div className="w-full h-[246px] flex flex-col space-y-10 justify-center items-center font-tight font-light text-[14px]  text-[#D3D3D3]">
+        <div className="w-full py-10 flex flex-col space-y-10 justify-center items-center font-tight font-light text-[14px]  text-[#D3D3D3]">
           <Link href={"/"}>
             <img src="/images/jala-symbol-img.png" alt="kayen-symbol-img" />
           </Link>

@@ -9,15 +9,15 @@ export default function PartnerSection() {
   const onMouseEnterLaunchSherlock = () => setIsSherlockHovered(true);
   const onMouseLeaveLaunchSherlock = () => setIsSherlockHovered(false);
 
-  const onMouseEnterLaunchCertik = () => setIsSherlockHovered(true);
-  const onMouseLeaveLaunchCertik = () => setIsSherlockHovered(false);
+  const onMouseEnterLaunchCertik = () => setIsCertikHovered(true);
+  const onMouseLeaveLaunchCertik = () => setIsCertikHovered(false);
   return (
     <>
       {isMobile ? (
         <div className="w-full space-y-10 pb-16">
           <div className="flex flex-col justify-center space-y-4">
             <img className="px-[20%]" src="/images/partners-asset.svg" alt="partners-asset" />
-            <div className="uppercase text-[48px] leading-[56px] font-medium text-center text-[#FF1D00] ">
+            <div className="uppercase text-4xl font-medium text-center text-[#FF1D00]">
               <span className="text-white">Our </span>
               <span className="text-[#FF1D00] ">Security</span>
             </div>
@@ -34,7 +34,7 @@ export default function PartnerSection() {
           </div>
           <div className="w-full flex flex-col justify-center gap-y-4 px-[5%]">
             <div
-              className="flex justify-center items-center text-center border border-[#272A2A] h-[160px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-700"
+              className="flex justify-center items-center text-center border border-[#272A2A] h-[120px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-700"
               onMouseEnter={onMouseEnterLaunchSherlock}
               onMouseLeave={onMouseLeaveLaunchSherlock}
             >
@@ -44,8 +44,16 @@ export default function PartnerSection() {
                 <img src="/images/sherlock-logo-with-title.svg" alt="sherlock-logo-with-title" />
               )}
             </div>
-            <div className="flex justify-center items-center text-center border border-[#272A2A] h-[160px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-700">
-              <img src="/images/certik-logo-with-title.svg" alt="certik-logo-with-title" />
+            <div
+              className="flex justify-center items-center text-center border border-[#272A2A] h-[120px] bg-[#0F1212] hover:border hover:border-jala-red hover:bg-transparent hover:duration-700"
+              onMouseEnter={onMouseEnterLaunchCertik}
+              onMouseLeave={onMouseLeaveLaunchCertik}
+            >
+              {isCertikHovering ? (
+                <img src="/images/certik-logo-with-title-hover.svg" alt="certik-logo-with-title-hover" />
+              ) : (
+                <img src="/images/certik-logo-with-title.svg" alt="certik-logo-with-title" />
+              )}
             </div>
           </div>
         </div>
