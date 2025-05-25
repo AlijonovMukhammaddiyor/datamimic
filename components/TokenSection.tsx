@@ -18,8 +18,8 @@ export default function TokenSection() {
         DataMimic provides turnkey data solutions for humanoid robotics, relieving robot companies and research labs of
         the time-consuming burden of data collection so your team can focus on AI innovation.
       </p>
-      <div className="w-full max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl mt-3 md:mt-6">
-        <video src="/IMG_4736.mp4" autoPlay loop muted className="w-full aspect-video rounded-md object-cover" />
+      <div className="w-full h-full max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl mt-3 md:mt-6">
+        <video src="/IMG_4736.mp4" autoPlay loop muted className="w-full h-full aspect-video rounded-md object-cover" />
       </div>
     </div>
   );
